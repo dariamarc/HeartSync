@@ -1,16 +1,22 @@
+import logging
 import random
 import cv2
-import skimage.exposure
-from PIL import Image
 import numpy as np
-from matplotlib import cm
+import skimage.exposure
 from scipy import ndimage
 from scipy.ndimage import zoom
-from skimage.transform import resize
 import tensorflow as tf
+from nipype.interfaces.image import Reorient
+from src.utils.exception import PreprocessException
 
 
 def resize_image(image, resize_factor):
+    """
+    Resize image by a resize factor on x, y and z axis
+    :param image: image to be resized
+    :param resize_factor: resize factor used
+    :return: resized image
+    """
     depth_factor = resize_factor / image.shape[0]
     height_factor = resize_factor / image.shape[1]
     width_factor = resize_factor / image.shape[2]
@@ -37,54 +43,84 @@ def rotate_image(image, label):
     return augmented_volume
 
 
-def clahe_images(data):
-    for i in range(len(data)):
-        data[i] = data[i] / 2048
-        img = skimage.exposure.equalize_adapthist(data[i] / 2048, 8)
-        data[i] = img
+def clahe_image(image):
+    # TODO: fix the CLAHE technique
+    """
+    Apply CLAHE to image for equalization
+    :param image: image to apply CLAHE to
+    :return: image that has CLAHE applied
+    """
+    img = skimage.exposure.equalize_adapthist(image / 255, (8, 8))
 
-    return data
+    return img
 
 
-def resize_data(img_data, labels_data, resize_ratio=0.6):
-
-    # resize_dim = (np.array(img_data.shape) * resize_ratio).astype('int')
-    # img_data = resize(img_data, resize_dim, order=1, preserve_range=True)
-    # lab_data = resize(labels_data, resize_dim, order=1, preserve_range=True)
-
-    img_data = resize_image(img_data, 64)
-    lab_data = resize_image(labels_data, 64)
+def resize_data(img_data, labels_data, size):
+    """
+    Resize all images and labels from image list and label list
+    :param img_data: list of images
+    :param labels_data: list of labels
+    :return: list of resized images, list of resized labels, list of resized labels with 0s
+    """
+    img_data = resize_image(img_data, size)
+    lab_data = resize_image(labels_data, size)
     lab_r_data = np.zeros(lab_data.shape, dtype='int32')
 
     return img_data, lab_data, lab_r_data
 
 
 def rename_label(label, lab_r_data, rename_map):
+    """
+    Renames label values to integers from 0 to 7
+    :param label: label data
+    :param lab_r_data: volume with 0s the same size of label
+    :param rename_map: dictionary containing renaming mappings for each label
+    :return: label data renamed
+    """
     for i in range(len(rename_map)):
         lab_r_data[label == rename_map[i]] = i
 
     return lab_r_data
 
 
-def preprocess_data(data, labels):
+def preprocess_data(data, labels, input_shape):
+    """
+    Preprocesses training data: resizing images, renaming the labels, normalizing images, applying CLAHE
+    :param data: list of images
+    :param labels: list of labels
+    :param input_shape: shaoe of the input for the model
+    :return: list of processed images and list of processed labels
+    """
     rename_map = [0, 205, 420, 500, 550, 600, 820, 850]
 
     images = []
     labels_proc = []
 
-    print("Preparing data for training. This may take a few minutes")
+    logging.info("Preparing data for training. This may take a few minutes")
     for i in range(len(data)):
-        img_data, label, label_r = resize_data(data[i], labels[i])
-        label_r = rename_label(label, label_r, rename_map)
-        img_data = normalize_img(img_data)
-        images.append(img_data)
-        labels_proc.append(label_r)
+        try:
+            img_data, label, label_r = resize_data(data[i], labels[i], int(input_shape[0]))
+            label_r = rename_label(label, label_r, rename_map)
+            img_data = normalize_img(img_data)
+            # img_data = clahe_image(img_data)
+            images.append(img_data)
+            labels_proc.append(label_r)
+        except Exception as e:
+            raise PreprocessException(e)
 
-    print("Finished preparing data for training")
+    images = np.reshape(images, (len(images), input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
+    labels_proc = np.reshape(labels_proc, (len(labels_proc), input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
+
+    logging.info("Finished preparing data for training")
     return images, labels_proc
 
 
 def normalize_img(img):
+    """
+    Normalize by mean of pixels given image
+    :param img: image to be normalized
+    :return: normalized image
+    """
     img = img / 255.0
     mean_temp = np.mean(img)
     dev_temp = np.std(img)
@@ -92,34 +128,20 @@ def normalize_img(img):
     return img_norm
 
 
-def transform_data(data, labels, model):
-    if model == "localization":
-        for i in range(len(data)):
-            image = data[i]
-            label = labels[i]
+def reorient_data_to_rai(images, labels):
+    """
+    Reorients images and labels to RAI format
+    :param images: list of images
+    :param labels: list of labels
+    """
+    reorient = Reorient(orientation='LPS')
 
-            image = image / 2048  # clamp the intensity values between -1 and 1
-            image = resize_image(image, 32)
-            image = tf.expand_dims(image, axis=3)
-            data[i] = image
+    for image in images:
+        reorient.inputs.in_file = image
+        res = reorient.run()
+        image = res.outputs.out_file
 
-            label = resize_image(label, 32)
-            label = tf.expand_dims(label, axis=3)
-            labels[i] = label
-
-        return np.asarray(data), np.asarray(labels)
-    elif model == "segmentation":
-        for i in range(len(data)):
-            image = data[i]
-            label = labels[i]
-
-            image = resize_image(image, 64)
-            image = tf.expand_dims(image, axis=3)
-            data[i] = image
-
-            label = resize_image(label, 64)
-            label = tf.expand_dims(label, axis=3)
-            labels[i] = label
-
-        return np.asarray(data), np.asarray(labels)
-    return None
+    for label in labels:
+        reorient.inputs.in_file = label
+        res = reorient.run()
+        label = res.outputs.out_file

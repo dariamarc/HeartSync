@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Whole heart segmentation/.idea/Whole heart segmentation.iml" filepath="$PROJECT_DIR$/../Whole heart segmentation/.idea/Whole heart segmentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/heartsync-backend.iml" filepath="$PROJECT_DIR$/.idea/heartsync-backend.iml" />
     </modules>
   </component>

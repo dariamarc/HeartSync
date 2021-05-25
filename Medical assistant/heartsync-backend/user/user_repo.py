@@ -1,5 +1,4 @@
 import json
-
 from flask import jsonify
 from sqlalchemy import Table
 from sqlalchemy import select, update

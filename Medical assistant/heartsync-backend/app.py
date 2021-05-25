@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from sqlalchemy import create_engine
 from sqlalchemy import MetaData
@@ -8,6 +9,7 @@ from flask import make_response, jsonify
 from user.user_repo import UserRepo
 from flask_cors import CORS
 
+logging.basicConfig(filaname="heartsync.log")
 
 app = Flask(__name__)
 CORS(app)
