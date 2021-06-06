@@ -5,7 +5,7 @@ import logging
 import tensorflow as tf
 from tensorflow import keras as k
 from src.data.load_data import DataLoader
-from src.data.transform_data import preprocess_data
+from src.data.transform_data import preprocess_data, rotate_image
 from src.model.losses import loss_fn
 from src.utils.exception import PreprocessException
 
@@ -42,8 +42,8 @@ class UnetModel:
     def __init__(self):
         config = configparser.ConfigParser()
         config.read('../model/init/model.ini')
-        input_size = config.get('MODEL_INIT', 'INPUT_SIZE')
-        input_chn = config.get('MODEL_INIT', 'INPUT_CHANNEL')
+        input_size = int(config.get('MODEL_INIT', 'INPUT_SIZE'))
+        input_chn = int(config.get('MODEL_INIT', 'INPUT_CHANNEL'))
         self.input_shape = (input_size, input_size, input_size, input_chn)
         self.data_loader = DataLoader()
         self.model_path = config.get('MODEL_INIT', 'MODEL_DIR')
@@ -188,7 +188,7 @@ class UnetModel:
             # Augment on the fly during training.
             train_dataset = (
                 train_loader.shuffle(len(inputs))
-                    # .map(train_preprocessing)
+                    .map(lambda image, label: rotate_image(image, label))
                     .batch(batch_size)
                 # .prefetch(2)
             )
@@ -200,7 +200,7 @@ class UnetModel:
             model.compile(loss=loss_fn, optimizer='adam', metrics=['accuracy'], run_eagerly=True)
 
             logging.info("Training model...")
-            model.fit(train_dataset, epochs=30, verbose=2)
+            model.fit(train_dataset, epochs=30)
 
             model.save(self.model_path)
         except FileNotFoundError as fe:

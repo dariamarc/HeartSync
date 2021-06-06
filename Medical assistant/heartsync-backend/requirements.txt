@@ -10,3 +10,5 @@ tensorflow~=2.5.0
 scipy~=1.6.1
 nipype~=1.6.0
 Keras~=2.4.3
+passlib~=1.7.4
+itsdangerous~=1.1.0

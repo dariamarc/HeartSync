@@ -5,9 +5,11 @@ import numpy as np
 import skimage.exposure
 from scipy import ndimage
 from scipy.ndimage import zoom
+from scipy.ndimage import rotate
 import tensorflow as tf
 from nipype.interfaces.image import Reorient
 from src.utils.exception import PreprocessException
+import tensorflow_addons as tfa
 
 
 def resize_image(image, resize_factor):
@@ -25,22 +27,18 @@ def resize_image(image, resize_factor):
 
 
 def rotate_image(image, label):
+    if np.random.random() > 0.65:
+        # print 'rotating patch...'
+        rand_angle = [-25, 25]
+        np.random.shuffle(rand_angle)
+        image = tfa.image.rotate(image, rand_angle[0])
+        label = tfa.image.rotate(label, rand_angle[0])
+        # image = image.numpy()
+        # label - label.numpy()
+        # image = rotate(image, angle=rand_angle[0], axes=(1, 0), reshape=False, order=1)
+        # label = rotate(label, angle=rand_angle[0], axes=(1, 0), reshape=False, order=0)
 
-    def scipy_rotate(image, label):
-        # pick angle at random
-        angle = random.randint(-25, 25)
-        # rotate volume
-        image = ndimage.rotate(image, angle, reshape=False)
-        image[image < 0] = 0
-        image[image > 1] = 1
-
-        label = ndimage.rotate(label, angle, reshape=False)
-        label[label < 0] = 0
-        label[label > 1] = 1
-        return image, label
-
-    augmented_volume = tf.numpy_function(scipy_rotate, [image, label], tf.float32)
-    return augmented_volume
+    return image, label
 
 
 def clahe_image(image):
@@ -50,7 +48,8 @@ def clahe_image(image):
     :param image: image to apply CLAHE to
     :return: image that has CLAHE applied
     """
-    img = skimage.exposure.equalize_adapthist(image / 255, (8, 8))
+    image = image / 255
+    img = skimage.exposure.equalize_adapthist(image, kernel_size=(8, 8))
 
     return img
 

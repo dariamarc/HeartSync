@@ -28,6 +28,7 @@ import {ScansHome} from "./scans/ScansHome";
 import {ScanDetails} from "./scans/ScanDetails";
 import {AuthProvider} from "./auth/AuthProvider";
 import {PrivateRoute} from "./auth/PrivateRoute";
+import {Confirm} from "./auth/Confirm";
 
 const App: React.FC = () => (
   <IonApp>
@@ -39,6 +40,7 @@ const App: React.FC = () => (
           <Route exact path="/signup" component={Signup}></Route>
           <PrivateRoute exact path="/home" component={ScansHome}></PrivateRoute>
           <PrivateRoute exact path="/scan" component={ScanDetails}></PrivateRoute>
+          <Route exact path='/confirm/:_emailToken' component={Confirm}></Route>
         <Route exact path="/">
           <Redirect to="/welcome" />
         </Route>

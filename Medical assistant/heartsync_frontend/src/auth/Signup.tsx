@@ -139,6 +139,7 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
                                   onIonChange={e => setState({...state, repeat_password: e.detail.value || ''})}></IonInput>
                         {errorRepeatPassword && <div>{errorRepeatPassword}</div>}
                         <IonButton color="medium" shape="round" onClick={handleSignUp}>Create account</IonButton>
+                        {signupError && <div>Username already exists</div>}
                     </IonCardContent>
                 </IonCard>
             </IonContent>

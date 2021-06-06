@@ -2,12 +2,13 @@ import {getLogger} from "../shared";
 import React, {useCallback, useEffect, useState} from "react";
 import PropTypes from "prop-types";
 import { Storage } from "@capacitor/core";
-import {login as loginApi, signup as signupApi} from './AuthApi'
+import {confirmEmailApi, login as loginApi, signup as signupApi} from './AuthApi'
 const log = getLogger('AuthProvider')
 
 type LoginFn = (username?: string, password?: string) => void
 type LogoutFn = () => void
 type SignUpFn = (username?: string, password?: string, email?: string, firstname?: string, lastname?: string) => void
+type ConfirmEmailFn = (emailToken?: string) => void
 
 export interface AuthState {
     authenticationError: Error | null;
@@ -19,6 +20,15 @@ export interface AuthState {
     username?: string;
     password?: string;
     token: string;
+}
+
+export interface ConfirmEmailState {
+    confirmEmailError: Error | null,
+    isConfirmed: boolean,
+    isConfirming: boolean,
+    pendingConfirming: boolean,
+    confirmEmail?: ConfirmEmailFn,
+    emailToken?: string
 }
 
 export interface SignUpState {
@@ -51,8 +61,17 @@ const signUpInitialState: SignUpState = {
     message: null,
 }
 
+const confirmEmailInitialState: ConfirmEmailState = {
+    isConfirmed: false,
+    isConfirming: false,
+    confirmEmailError: null,
+    pendingConfirming: false,
+    emailToken: ''
+}
+
 export const AuthContext = React.createContext<AuthState>(initialState);
 export const SignUpContext = React.createContext<SignUpState>(signUpInitialState);
+export const ConfirmEmailContext = React.createContext<ConfirmEmailState>(confirmEmailInitialState);
 
 interface AuthProviderProps {
     children: PropTypes.ReactNodeLike
@@ -71,16 +90,35 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
     const logout = useCallback<LogoutFn>(logoutCallback, []);
     useEffect(authenticationEffect, [pendingAuthentication]);
 
+    const [confirmEmailState, setConfirmEmailState] = useState<ConfirmEmailState>(confirmEmailInitialState);
+    const {isConfirmed, isConfirming, confirmEmailError, emailToken, pendingConfirming} = confirmEmailState;
+    const confirmEmail = useCallback<ConfirmEmailFn>(confirmEmailCallback, []);
+    useEffect(confirmEmailEffect, [pendingConfirming]);
+    const valueC = {isConfirmed, isConfirming, confirmEmailError, emailToken, pendingConfirming, confirmEmail};
+
     const value = { isAuthenticated, login, logout, isAuthenticating, authenticationError, token};
 
     log('render');
     return (
+        <ConfirmEmailContext.Provider value={valueC}>
         <SignUpContext.Provider value = {valueS}>
             <AuthContext.Provider value={value}>
                 {children}
             </AuthContext.Provider>
         </SignUpContext.Provider>
+        </ConfirmEmailContext.Provider>
     );
+
+    function confirmEmailCallback(emailToken?: string){
+        log('confirm email');
+        setConfirmEmailState({
+            ...confirmEmailState,
+            pendingConfirming: true,
+            emailToken
+        });
+
+
+    }
 
     function signupCallback(username?: string, password?: string, email?: string, firstname?: string, lastname?: string): void {
         log('sign up');
@@ -120,6 +158,54 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
             });
 
         })();
+    }
+
+    function confirmEmailEffect(){
+        let canceled = false;
+        confirm();
+
+        return () => {
+            canceled = true;
+        }
+
+        async function confirm(){
+            if(!pendingConfirming){
+                log('confirm, pendingConfirming!, return');
+                return;
+            }
+            try{
+                log('Confirming...');
+                setConfirmEmailState({
+                    ...confirmEmailState,
+                    isConfirming: true
+                });
+                const {emailToken} = confirmEmailState;
+                await confirmEmailApi(emailToken);
+
+                if(canceled){
+                    return;
+                }
+                    setConfirmEmailState({
+                        ...confirmEmailState,
+                        pendingConfirming: false,
+                        isConfirmed: true,
+                        isConfirming: false
+                    });
+            }
+            catch (error){
+                if(canceled){
+                    return;
+                }
+                log('confirming email failed');
+                setConfirmEmailState({
+                    ...confirmEmailState,
+                    isConfirming: false,
+                    pendingConfirming: false,
+                    confirmEmailError: error
+                });
+            }
+        }
+
     }
 
     function signupEffect() {
