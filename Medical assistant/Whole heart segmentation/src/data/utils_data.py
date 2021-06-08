@@ -25,6 +25,8 @@ def show_slices(slices):
     for i, slice in enumerate(slices):
         axes[i].imshow(slice.T, cmap="gray", origin="lower")
 
+    plt.show()
+
 
 def plot_images(test_image, test_labels):
     print(test_image.shape)

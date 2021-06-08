@@ -1,15 +1,21 @@
 import logging
+import math
 import random
 import cv2
 import numpy as np
 import skimage.exposure
+from matplotlib import pyplot as plt
 from scipy import ndimage
 from scipy.ndimage import zoom
 from scipy.ndimage import rotate
 import tensorflow as tf
 from nipype.interfaces.image import Reorient
+
+from src.data.utils_data import show_slices
 from src.utils.exception import PreprocessException
 import tensorflow_addons as tfa
+
+from src.utils.ops import map_image, convert_to_int
 
 
 def resize_image(image, resize_factor):
@@ -26,32 +32,39 @@ def resize_image(image, resize_factor):
     return resized_image
 
 
-def rotate_image(image, label):
-    if np.random.random() > 0.65:
-        # print 'rotating patch...'
-        rand_angle = [-25, 25]
-        np.random.shuffle(rand_angle)
-        image = tfa.image.rotate(image, rand_angle[0])
-        label = tfa.image.rotate(label, rand_angle[0])
-        # image = image.numpy()
-        # label - label.numpy()
-        # image = rotate(image, angle=rand_angle[0], axes=(1, 0), reshape=False, order=1)
-        # label = rotate(label, angle=rand_angle[0], axes=(1, 0), reshape=False, order=0)
-
+def rotate_tf(image, label):
+    image, label = tf.py_function(func=rotate_image, inp=[image, label], Tout=tf.float64)
     return image, label
 
+def rotate_images(images, labels):
+    n = len(images)
 
-def clahe_image(image):
-    # TODO: fix the CLAHE technique
-    """
-    Apply CLAHE to image for equalization
-    :param image: image to apply CLAHE to
-    :return: image that has CLAHE applied
-    """
-    image = image / 255
-    img = skimage.exposure.equalize_adapthist(image, kernel_size=(8, 8))
+    new_images = []
+    new_labels = []
+    for i in range(n):
+        new_images.append(images[i])
+        new_labels.append(labels[i])
+        # random augmentation of the current image
+        rot_img, rot_label = rotate_image(images[i], labels[i])
+        new_images.append(rot_img)
+        new_labels.append(rot_label)
 
-    return img
+    return new_images, new_labels
+
+
+def rotate_image(image, label):
+    # if np.random.random() > 0.65:
+    rand_angle = [-25, 25]
+    np.random.shuffle(rand_angle)
+        # image = image.numpy()
+        # label - label.numpy()
+    image = rotate(image, angle=rand_angle[0], axes=(1, 0), reshape=False, order=1)
+    label = rotate(label, angle=rand_angle[0], axes=(1, 0), reshape=False, order=0)
+
+        # image = tf.convert_to_tensor(image)
+        # label = tf.convert_to_tensor(label)
+
+    return image, label
 
 
 def resize_data(img_data, labels_data, size):
@@ -96,12 +109,12 @@ def preprocess_data(data, labels, input_shape):
     labels_proc = []
 
     logging.info("Preparing data for training. This may take a few minutes")
+
     for i in range(len(data)):
         try:
             img_data, label, label_r = resize_data(data[i], labels[i], int(input_shape[0]))
             label_r = rename_label(label, label_r, rename_map)
             img_data = normalize_img(img_data)
-            # img_data = clahe_image(img_data)
             images.append(img_data)
             labels_proc.append(label_r)
         except Exception as e:
