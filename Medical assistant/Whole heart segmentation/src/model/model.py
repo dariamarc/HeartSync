@@ -8,7 +8,7 @@ import logging
 import tensorflow as tf
 from tensorflow import keras as k
 from src.data.load_data import DataLoader
-from src.data.transform_data import preprocess_data, rotate_image, rotate_tf, rotate_images
+from src.data.transform_data import preprocess_data, rotate_image, rotate_tf, rotate_images, prepare_test_image
 from src.model.losses import loss_fn
 from src.utils.exception import PreprocessException
 
@@ -235,14 +235,14 @@ class UnetModel:
             batch_size = 1
             train_dataset = (
                 train_loader
-                .shuffle(len(train_idx))
-                .shard(num_shards=len(train_inputs) // 10, index=0)
-                .batch(batch_size)
+                    .shuffle(len(train_idx))
+                    .shard(num_shards=len(train_inputs) // 10, index=0)
+                    .batch(batch_size)
             )
 
             validation_dataset = (
                 validation_loader
-                .batch(batch_size)
+                    .batch(batch_size)
             )
 
             logging.info("Loading model...")
@@ -254,7 +254,7 @@ class UnetModel:
 
             logging.info("Training model...")
 
-            model.fit(train_dataset, epochs=100)
+            model.fit(train_dataset, epochs=150)
 
             scores = model.evaluate(validation_dataset, verbose=1)
 
@@ -267,18 +267,21 @@ class UnetModel:
         except PreprocessException as pe:
             logging.error("Preprocess exception " + str(pe))
 
-
     def test_model(self, image):
         """
         Test model on given image
         :param image: image of heart to be segmented
         :return: prediction of the model
         """
+        image = prepare_test_image(image, self.input_shape)
+
         try:
-            model = keras.models.load_model(self.model_path)
+            loss = {'loss_fn': loss_fn}
+            model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
         except Exception as e:
             logging.error("Error loading model " + str(e))
 
-        prediction = model.predict(image)
+        prediction = model.predict(image, batch_size=1, verbose=1)
+        pred_labels = tf.argmax(prediction, axis=4).numpy()
 
-        return prediction
+        return pred_labels

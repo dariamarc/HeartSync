@@ -1,3 +1,4 @@
+import copy
 import logging
 import math
 import random
@@ -43,11 +44,28 @@ def rotate_images(images, labels):
     new_labels = []
     for i in range(n):
         new_images.append(images[i])
+
+        # img = np.reshape(images[i], (64, 64, 64))
+        # sh = img.shape
+        # slice0 = img[sh[0] // 2, :, :]
+        # slice1 = img[:, sh[1] // 2, :]
+        # slice2 = img[:, :, sh[2] // 2]
+        #
+        # show_slices([slice0, slice1, slice2])
         new_labels.append(labels[i])
         # random augmentation of the current image
-        rot_img, rot_label = rotate_image(images[i], labels[i])
-        new_images.append(rot_img)
-        new_labels.append(rot_label)
+        if np.random.random() > 0.65:
+            rot_img, rot_label = rotate_image(images[i], labels[i])
+
+        # rot_img = np.reshape(rot_img, (64, 64, 64))
+        # sh = rot_img.shape
+        # slice0 = rot_img[sh[0] // 2, :, :]
+        # slice1 = rot_img[:, sh[1] // 2, :]
+        # slice2 = rot_img[:, :, sh[2] // 2]
+        #
+        # show_slices([slice0, slice1, slice2])
+            new_images.append(rot_img)
+            new_labels.append(rot_label)
 
     return new_images, new_labels
 
@@ -74,11 +92,38 @@ def resize_data(img_data, labels_data, size):
     :param labels_data: list of labels
     :return: list of resized images, list of resized labels, list of resized labels with 0s
     """
-    img_data = resize_image(img_data, size)
-    lab_data = resize_image(labels_data, size)
-    lab_r_data = np.zeros(lab_data.shape, dtype='int32')
+    # img_data = resize_image(img_data, size)
+    # lab_data = resize_image(labels_data, size)
 
-    return img_data, lab_data, lab_r_data
+    rand_img = img_data.astype('float32')
+    rand_label = labels_data.astype('int32')
+
+    # randomly select a box anchor
+    l, w, h = rand_img.shape
+    l_rand = np.arange(l - size)
+    w_rand = np.arange(w - size)
+    h_rand = np.arange(h - size)
+
+    cropped = False
+    while not cropped:
+        np.random.shuffle(l_rand)
+        np.random.shuffle(w_rand)
+        np.random.shuffle(h_rand)
+        pos = np.array([l_rand[0], w_rand[0], h_rand[0]])
+        # crop
+        img_temp = copy.deepcopy(rand_img[pos[0]:pos[0] + size, pos[1]:pos[1] + size, pos[2]:pos[2] + size])
+
+        label_temp = copy.deepcopy(
+            rand_label[pos[0]:pos[0] + size, pos[1]:pos[1] + size, pos[2]:pos[2] + size])
+
+        lenny = len(set(label_temp.flatten()))
+        print(lenny)
+        if lenny >= 7:
+            cropped = True
+
+    lab_r_data = np.zeros(label_temp.shape, dtype='int32')
+
+    return img_temp, label_temp, lab_r_data
 
 
 def rename_label(label, lab_r_data, rename_map):
@@ -93,6 +138,14 @@ def rename_label(label, lab_r_data, rename_map):
         lab_r_data[label == rename_map[i]] = i
 
     return lab_r_data
+
+
+def prepare_test_image(image, input_shape):
+    image = resize_image(image, input_shape[0])
+    image = normalize_img(image)
+    image = np.reshape(image, (1, input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
+
+    return image
 
 
 def preprocess_data(data, labels, input_shape):

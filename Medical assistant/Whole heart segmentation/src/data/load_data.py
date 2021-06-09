@@ -69,11 +69,13 @@ class DataLoader:
         Loads CT images used for testing the model. The images are of type .nii.gz
         :return: list of all test images
         """
-        all_images = glob(os.path.join(self.data_path, 'raw\\ct_test', '*_image.nii.gz'))
+        data_dir = os.path.join('..', 'data')
+        all_images = glob(os.path.join(data_dir, 'raw\\ct_test', '*_image.nii.gz'))
         print(len(all_images), ' matching files found:', all_images[0])
 
         images = []
         for i in range(len(all_images)):
+        # for i in range(1):
             image = nib.load(all_images[i]).get_fdata()
             images.append(image)
 
