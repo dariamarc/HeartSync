@@ -225,6 +225,11 @@ class UnetModel:
             train_inputs = inputs[train_idx]
             train_outputs = outputs[train_idx]
             train_inputs, train_outputs = rotate_images(train_inputs, train_outputs)
+            train_rand_idxes = [i for i in range(len(train_inputs))]
+            np.random.shuffle(train_rand_idxes)
+            train_idxes = idxes[:10]
+            train_inputs = inputs[train_idxes]
+            train_outputs = outputs[train_idxes]
 
             val_inputs = inputs[val_idx]
             val_outputs = outputs[val_idx]
@@ -236,7 +241,7 @@ class UnetModel:
             train_dataset = (
                 train_loader
                     .shuffle(len(train_idx))
-                    .shard(num_shards=len(train_inputs) // 10, index=0)
+                    # .shard(num_shards=len(train_inputs) // 10, index=0)
                     .batch(batch_size)
             )
 
@@ -254,7 +259,7 @@ class UnetModel:
 
             logging.info("Training model...")
 
-            model.fit(train_dataset, epochs=150)
+            model.fit(train_dataset, epochs=300)
 
             scores = model.evaluate(validation_dataset, verbose=1)
 

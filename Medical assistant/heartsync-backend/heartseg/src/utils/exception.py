@@ -1,0 +1,3 @@
+
+class PreprocessException(Exception):
+    pass

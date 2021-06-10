@@ -1,0 +1,18 @@
+.card-center{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.upload-card{
+    width: 25%;
+    margin: auto;
+}
+
+.scans-card{
+    width: 75%;
+    margin: auto;
+}
+
+.item {
+    cursor: pointer;
+}

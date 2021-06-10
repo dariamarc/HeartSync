@@ -4,6 +4,7 @@ import {IonPage} from "@ionic/react";
 import {ConfirmEmailContext} from "./AuthProvider";
 import {Header} from "../layout/Header";
 import {Footer} from "../layout/Footer";
+import './Confirm.css';
 
 interface ConfirmDetailsProps extends RouteComponentProps<{
     _emailToken?: string
@@ -22,9 +23,9 @@ export const Confirm: React.FC<ConfirmDetailsProps> = ({history, match}) => {
         <IonPage>
             <Header></Header>
             {isConfirmed &&
-            <div>Your email address is confirmed, you can sing in.</div>}
+            <div className="center"><h3>Your email address is confirmed, you can sing in.</h3></div>}
             {confirmEmailError &&
-            <div>Something went wrong, could not confirm your email.</div>}
+            <div className="center"><h3>Something went wrong, could not confirm your email.</h3></div>}
             <Footer></Footer>
         </IonPage>
     )

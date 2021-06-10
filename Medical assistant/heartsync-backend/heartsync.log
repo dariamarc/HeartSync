@@ -199,3 +199,392 @@ INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:10] "[37mOPTIONS /api/auth/confi
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:11] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:18] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:19] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:45:59] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:46:43] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:47:10] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:47:49] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:48:15] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:48:41] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:49:54] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:50:15] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:51:24] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:52:45] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:54:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:57:40] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:58:39] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:00:02] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:03:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:15:02] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:15:43] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:24:00] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:26:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:28:52] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:31:51] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:33:41] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:42:37] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:43:42] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:44:17] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:45:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:02] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:16] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:31] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:50:09] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:05] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:27] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:48] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:09:46] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:10:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:11:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:28:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:52:07] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:53:06] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\data\\load_data.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:53:25] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:56:56] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:04:09] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:24:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:24:57] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:26:22] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:26:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:27:24] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:28:11] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:35:53] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:36:52] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:37:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/model_name_from_config\{saved_model.pbtxt|saved_model.pb}
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:40:35] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/heartseg_model_v2.h5\{saved_model.pbtxt|saved_model.pb}
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:41:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
+INFO:werkzeug: * Restarting with stat
+ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/heartseg_model_v2.h5\{saved_model.pbtxt|saved_model.pb}
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:43:09] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:44:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:48:37] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:49:18] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:52:16] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:53:05] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:54:16] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:57:53] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:04:40] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:05:57] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:10:27] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:11:18] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:46:02] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:46:02] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:46:01] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:46:35] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:47:15] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:49:11] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:50:48] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:51:19] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:51:57] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:57:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:10:03] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:11:07] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:11:59] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:12:11] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:21:51] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:21:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:56:02] "[35m[1mGET /api/files/get HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:56:34] "[37mGET /api/files/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:08:54] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:10:33] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:11:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 22:58:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:13:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:13:27] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:15:04] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:15:05] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:39] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:40] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:43] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:23:31] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:23:38] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:25:29] "[35m[1mGET /api/scans/get HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:25:53] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:28:28] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:28:29] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:29:04] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:29:04] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:36] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:36] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:56] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:27] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:27] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:31] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:32:44] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:33:55] "[35m[1mGET /api/scans/get HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:25] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:33] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:35:30] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:35:30] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:42:14] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:42:14] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:07:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:07:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -

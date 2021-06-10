@@ -3,7 +3,6 @@ import datetime
 from utils.config import Config
 from itsdangerous import URLSafeTimedSerializer
 
-
 def encode_auth_token(user_id):
     """
     Generates the Auth Token

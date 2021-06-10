@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {RouteComponentProps} from "react-router";
 import {
     CreateAnimation,
@@ -16,9 +16,10 @@ import {
 import {Header} from "../layout/Header";
 import {Footer} from "../layout/Footer";
 import './Welcome.css';
+import {AuthContext, AuthState} from "../auth/AuthProvider";
 
 export const Welcome: React.FC<RouteComponentProps> = ({history}) => {
-
+    const { isAuthenticated} = useContext<AuthState>(AuthContext);
     let animation = function simpleAnimation() {
         const heart = document.querySelector("#heart");
         if(heart){
@@ -58,7 +59,7 @@ export const Welcome: React.FC<RouteComponentProps> = ({history}) => {
                         <IonTitle className="welcome-title">A New Way to Look at Hearts</IonTitle>
                         <IonContent scrollY={false} color="light" className="text-wrapper-top">
                         <IonText className="welcome-text">HeartSync is the best platform to help you visualize and
-                            analyze CT heart medical scans. </IonText>
+                            analyze CT heart medical scans. Upload an image of a CT scan and vizualize the segmented heart, take notes and share your models with other users.</IonText>
                         </IonContent>
                         <IonButton color="medium" shape="round" href="/signup">Create account &gt;</IonButton>
                     </IonContent>
@@ -85,6 +86,7 @@ export const Welcome: React.FC<RouteComponentProps> = ({history}) => {
             </IonContent>
                 <Footer></Footer>
             </IonContent>
+            {isAuthenticated && history.push('/home')}
 
             <CreateAnimation ref={animation}></CreateAnimation>
         </IonPage>

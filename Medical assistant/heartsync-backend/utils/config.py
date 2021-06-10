@@ -15,6 +15,7 @@ class Config(object):
     MAIL_USE_SSL = True
     MAIL_PASSWORD = 'HeartSync2021'
     MAIL_USERNAME = 'heartsync2021@gmail.com'
+    SCAN_FILES = 'file/files'
 
 
 class ProductionConfig(Config):

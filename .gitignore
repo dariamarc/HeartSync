@@ -9,3 +9,4 @@ Medical assistant/Whole heart segmentation/data
 Medical assistant/Whole heart segmentation/src/model/localization_cnn.py
 Medical assistant/Whole heart segmentation/src/model/segmentation_cnn.py
 Thesis
+Medical assistant/heartsync-backend/heartseg/data

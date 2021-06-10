@@ -28,7 +28,7 @@ class UserRepo:
         query = select(self.users).where(self.users.c.username == username)
         user = None
         for row in self.con.execute(query):
-            user = User(row[0], row[1], row[2], row[3], row[4])
+            user = User(row[0], row[1], row[2], row[3], row[4], row[5])
 
         if user and pbkdf2_sha256.verify(password, user.password):
             auth_token = encode_auth_token(user.username)
@@ -50,7 +50,6 @@ class UserRepo:
         return False
 
     def signup(self, username, password, email, firstname, lastname):
-
         query = select(self.users).where(self.users.c.username == username)
         result = self.con.execute(query)
         if result.fetchone():
@@ -67,3 +66,12 @@ class UserRepo:
         send_email(email, subject, html, self.app, self.mail)
 
         return result.inserted_primary_key
+
+    def get_user_by_token(self, token):
+        query = select(self.users).where(self.users.c.token == token)
+        user = None
+        for row in self.con.execute(query):
+            user = User(row[0], row[1], row[2], row[3], row[4], row[5])
+
+        return user
+

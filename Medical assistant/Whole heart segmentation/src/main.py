@@ -1,6 +1,7 @@
 import logging
 
 import numpy as np
+from matplotlib import pyplot as plt
 
 from src.data.load_data import DataLoader
 from src.data.transform_data import preprocess_data
@@ -9,7 +10,7 @@ from src.model.model import UnetModel
 
 if __name__ == '__main__':
     logging.basicConfig(level='DEBUG')
-    model = UnetModel('heartseg_model_v2.h5')
+    model = UnetModel('heartseg_model_v3.h5')
     model.train_model()
     # data_loader = DataLoader()
     # test_images = data_loader.load_testing_data()
@@ -18,6 +19,12 @@ if __name__ == '__main__':
     #     predictions = np.reshape(predictions, (64, 64, 64))
     #     print(predictions.min())
     #     print(predictions.max())
+
+        # fig = plt.figure()
+        # ax = fig.add_subplot(111, projection='3d')
+        # ax.plot_trisurf(predictions,
+        #                 linewidth=0.2, antialiased=True)
+        # plt.show()
 
         # sh = predictions.shape
         # slice0 = predictions[sh[0] // 2, :, :]
