@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {RouteComponentProps} from "react-router";
 import {
     CreateAnimation,
@@ -46,6 +46,11 @@ export const Welcome: React.FC<RouteComponentProps> = ({history}) => {
         }
     }
 
+    useEffect(() => {
+        if(isAuthenticated)
+            history.push('/home');
+    });
+
     return (
         <IonPage>
             <IonContent>
@@ -86,8 +91,6 @@ export const Welcome: React.FC<RouteComponentProps> = ({history}) => {
             </IonContent>
                 <Footer></Footer>
             </IonContent>
-            {isAuthenticated && history.push('/home')}
-
             <CreateAnimation ref={animation}></CreateAnimation>
         </IonPage>
     )

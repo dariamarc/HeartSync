@@ -98,6 +98,8 @@ def process_file():
             response = make_response('Unauthorized action! Token is invalid', 401)
         else:
             file = request.files['file']
+            print(file.content_type)
+
             if file is None:
                 response = make_response('File is missing!', 409)
             elif file_service.check_file_type(file):
@@ -105,8 +107,8 @@ def process_file():
                 img = Nifti1Image.from_file_map({'header': fh, 'image': fh})
                 file_id = file_service.segment_image(img)
                 scan_name = file.filename.split(".")[0]
-                scan_id = scan_service.add_scan(user.username, file_id, scan_name)
-                response = make_response(str(scan_id), 200)
+                scan = scan_service.add_scan(user.username, file_id, scan_name)
+                response = make_response(scan, 200)
             else:
                 response = make_response('Invalid file type!', 415)
 
@@ -134,8 +136,8 @@ def get_user_scans():
     response.headers['Content-Type'] = 'application/json'
     return response
 
-@app.route('/api/files/get', methods=['GET'])
-def get_file():
+@app.route('/api/files/get/<int:fileid>', methods=['GET'])
+def get_file(fileid):
     full_token = request.headers['Authorization']
 
     if full_token is None:
@@ -151,12 +153,14 @@ def get_file():
             response.headers['Content-Type'] = 'application/json'
 
         else:
-            file_id = request.headers['fileid']
-            filename = file_service.get_file(file_id)
-            try:
-                return send_from_directory(app.config['SCAN_FILES'], filename)
-            except:
-                abort(404)
+            print(fileid)
+            file_contents = file_service.get_file(fileid)
+            # try:
+            # return send_from_directory(app.config['SCAN_FILES'], filename)
+            response = make_response(file_contents, 200);
+            response.headers['Content-Type'] = "arraybuffer";
+            # except:
+            #     abort(404)
 
     return response
 

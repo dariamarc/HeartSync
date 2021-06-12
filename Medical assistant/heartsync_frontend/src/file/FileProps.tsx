@@ -1,3 +1,3 @@
 export interface FileProps{
-    id?: number,
+    content: string
 }

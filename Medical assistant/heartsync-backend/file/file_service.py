@@ -1,3 +1,5 @@
+import io
+
 import numpy
 
 from heartseg.src.model.model import UnetModel
@@ -9,7 +11,7 @@ class FileService:
         self.heart_segmenter = UnetModel('heartseg_model_v2.h5')
 
     def check_file_type(self, file):
-        if file.content_type == 'application/gzip':
+        if file.content_type == 'application/gzip' or file.content_type == 'application/x-gzip':
             return True
         return False
 
@@ -27,7 +29,11 @@ class FileService:
         file = self.file_repo.get_file(file_id)
         if file:
             path_to_file = file.file
+            f = open(path_to_file, "r")
+            fi = io.FileIO(f.fileno())
+            breader = io.BufferedReader(fi)
+            contents = breader.read()
             filename = path_to_file.split('\\')[-1]
-            return filename
+            return {'content': contents, 'name': filename}
         return None
 

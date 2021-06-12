@@ -4,8 +4,22 @@
     float: left;
 }
 
+.text{
+    border-style: solid;
+    border-color: #284B63;
+    border-radius: 10px;
+}
+
+.top-content{
+    float: top;
+    max-height: 90%;
+}
+
 .right-content{
     width: 50%;
     height: 100%;
     float: right;
+}
+.page{
+    height: 100%;
 }

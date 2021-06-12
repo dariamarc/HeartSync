@@ -10,7 +10,7 @@ import {
     IonCardTitle,
     IonContent, IonIcon,
     IonInput, IonItem,
-    IonLabel, IonList,
+    IonLabel, IonList, IonLoading,
     IonPage
 } from "@ionic/react";
 import './ScansHome.css';
@@ -20,7 +20,7 @@ import Scan from "./Scan";
 
 
 export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
-    const {scans, fetching, fetchingError, saveScan} = useContext(ScansContext);
+    const {scans, fetching, fetchingError, saveScan, saving, savingError} = useContext(ScansContext);
 
     interface InternalValues {
         file: any;
@@ -40,10 +40,9 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
         }
         console.log(values.current.file)
         let formData = new FormData();
-        formData.append("file", values.current.file, values.current.file.name);
+        formData.append("file", values.current.file);
         //console.log(formData.get("file"));
         try {
-                //console.log(stringTags);
                 saveScan?.(formData);
 
         } catch (err) {
@@ -79,6 +78,7 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
                             {!scans && (<IonItem className="card-center"><h5>You have no saved models. Upload a file to create one.</h5></IonItem>)}
                         </IonCardContent>
                     </IonCard>
+                    <IonLoading isOpen={saving} message="Uploading scan..." />
                 </div>
             </IonContent>
             <Footer></Footer>

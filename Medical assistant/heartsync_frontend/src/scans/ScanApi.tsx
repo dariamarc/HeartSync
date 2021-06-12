@@ -17,7 +17,20 @@ export interface ScanProps {
     fileid: number
 }
 
+export const uploadConfig = (token?: string) => ({
+    headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
+    },
+});
+
 export const getScans: (token?: string) => Promise<ScanProps[]> = (token) => {
     var getScansUrl = scansUrl + 'get'
     return withLogs(axios.get(getScansUrl, authConfig(token)), 'getScans');
 }
+
+export const uploadFile: (token: string, file: FormData) => Promise<ScanProps> = (token, file) => {
+    var uploadUrl = scansUrl + 'add';
+    return withLogs(axios.post(uploadUrl, file, uploadConfig(token)), "uploadFile");
+}
+

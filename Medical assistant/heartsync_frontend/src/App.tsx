@@ -21,17 +21,19 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import {Welcome} from "./welcome/Welcome";
-import React from "react";
+import React, {lazy} from "react";
 import {Login} from "./auth/Login";
 import {Signup} from "./auth/Signup";
 import {ScansHome} from "./scans/ScansHome";
-import {ScanDetails} from "./scans/ScanDetails";
+// import {ScanDetails} from "./scans/ScanDetails";
 import {AuthProvider} from "./auth/AuthProvider";
 import {PrivateRoute} from "./auth/PrivateRoute";
 import {Confirm} from "./auth/Confirm";
 import {ScanProvider} from "./scans/ScanProvider";
+import {ScanDetails} from "./scans/ScanDetails";
 
 const App: React.FC = () => (
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>

@@ -18,6 +18,15 @@ class ScanRepo:
 
         return result.inserted_primary_key
 
+    def get_scan(self, id):
+        query = select([self.scans]).where(id == id)
+        scan = None
+        for row in self.con.execute(query):
+            scan = Scan(row[0], row[1], row[2], row[3])
+
+        return scan
+
+
     def get_user_scans(self, username):
         query = select([self.scans]).where(username == username)
         result_proxy = self.con.execute(query)
