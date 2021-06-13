@@ -49,7 +49,8 @@ class DataLoader:
         images = []
         labels = []
 
-        for i in range(len(all_images)):
+        # for i in range(len(all_images)):
+        for i in range(2):
             nii_image = nib.load(all_images[i])
             image = nii_image.get_fdata()
             sh = image.shape

@@ -26,7 +26,6 @@ export const Header: React.FC = () => {
         <>
             <IonHeader>
                 <IonToolbar color="light" class="header">
-
                     {token != "" && (
                         <IonButtons slot="start">
                             <IonButton className="logo-button" href="/home">

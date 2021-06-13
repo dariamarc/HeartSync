@@ -1,6 +1,7 @@
 import configparser
 from random import random
 import numpy as np
+from skimage.transform import resize
 from sklearn.model_selection import KFold
 import keras.models
 import logging
@@ -10,6 +11,7 @@ from heartseg.src.data.load_data import DataLoader
 from heartseg.src.data.transform_data import preprocess_data, rotate_image, rotate_tf, rotate_images, prepare_test_image
 from heartseg.src.model.losses import loss_fn
 from heartseg.src.utils.exception import PreprocessException
+from heartseg.src.data.utils_data import compose_cubes_to_vol, decompose_data_to_cubes
 
 
 def conv3D(input, output, kernel_size, strides):
@@ -44,8 +46,10 @@ class UnetModel:
     def __init__(self, model_name):
         config = configparser.ConfigParser()
         config.read('heartseg/model/init/model.ini')
-        input_size = int(config.get('MODEL_INIT', 'INPUT_SIZE'))
-        input_chn = int(config.get('MODEL_INIT', 'INPUT_CHANNEL'))
+        # input_size = int(config.get('MODEL_INIT', 'INPUT_SIZE'))
+        input_size = 64
+        # input_chn = int(config.get('MODEL_INIT', 'INPUT_CHANNEL'))
+        input_chn = 1
         self.input_shape = (input_size, input_size, input_size, input_chn)
         self.data_loader = DataLoader()
         # self.model_path = config.get('MODEL_INIT', 'MODEL_DIR')
@@ -274,16 +278,41 @@ class UnetModel:
         :param image: image of heart to be segmented
         :return: prediction of the model
         """
+        sh = image.shape
+        resize_dim = (np.array([64, 64, 64])).astype('int')
         image = prepare_test_image(image, self.input_shape)
-        pred_labels = None
+        cube_list = decompose_data_to_cubes(image, 1, 64, 1, 4)
+
         try:
             loss = {'loss_fn': loss_fn}
             model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
-
-            prediction = model.predict(image, batch_size=1, verbose=1)
-            pred_labels = tf.argmax(prediction, axis=4).numpy()
-            pred_labels = np.reshape(pred_labels, (64, 64, 64))
         except Exception as e:
             logging.error("Error loading model " + str(e))
 
-        return pred_labels
+        cube_prob_list = []
+        cube_label_list = []
+        print(len(cube_list))
+        for c in cube_list:
+            cube_to_test = c
+            mean_temp = np.mean(cube_to_test)
+            dev_temp = np.std(cube_to_test)
+            cube2test_norm = (cube_to_test - mean_temp) / dev_temp
+
+            prediction = model.predict(cube2test_norm, batch_size=1, verbose=1)
+            pred_labels = tf.argmax(prediction, axis=4).numpy()
+            cube_prob_list.append(prediction)
+            cube_label_list.append(pred_labels)
+
+        composed_prob_vol = compose_cubes_to_vol(cube_prob_list, resize_dim, 64, 4, 8)
+
+        min_prob = np.min(composed_prob_vol)
+        max_prob = np.max(composed_prob_vol)
+        for p in range(8):
+            composed_prob_resz = resize(composed_prob_vol[:, :, :, p], sh, order=1, preserve_range=True)
+
+            composed_prob_resz = (composed_prob_resz - np.min(composed_prob_resz)) / (np.max(composed_prob_resz) - np.min(composed_prob_resz))
+            composed_prob_resz = (composed_prob_resz - min_prob) / (max_prob - min_prob)
+            composed_prob_resz = composed_prob_resz * 255
+            composed_prob_resz = composed_prob_resz.astype('int16')
+
+        return composed_prob_resz

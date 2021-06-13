@@ -26,13 +26,35 @@ export const Login: React.FC<RouteComponentProps> = ({history}) => {
     const [state, setState] = useState<LoginState>({});
     const {username, password} = state
     const {isAuthenticated, isAuthenticating, login, authenticationError} = useContext(AuthContext)
+    const [errorUsername, setErrorUsername] = useState('');
+    const [errorPassword, setErrorPassword] = useState('');
 
     const handleLogin = () => {
-        login?.(username, password)
+        setErrorUsername('');
+        setErrorPassword('');
+        validateUsername(username || '');
+        validatePassword(password || '');
+        console.log(errorUsername.length)
+        if(errorUsername.length == 0 && errorPassword.length == 0){
+            login?.(username, password)
+        }
+
     }
 
     if(isAuthenticated){
         return <Redirect to={{pathname: '/home'}}/>
+    }
+
+    function validateUsername(username){
+        if(username === '') {
+            setErrorUsername('Username is invalid');
+        }
+    }
+
+    function validatePassword(password){
+        if(password === ''){
+            setErrorPassword('Password is invalid');
+        }
     }
 
     return (
@@ -46,13 +68,14 @@ export const Login: React.FC<RouteComponentProps> = ({history}) => {
                     <IonCardContent className="card-center">
                         <IonInput placeholder='Username' id="email" value={username}
                         onIonChange={e => setState({...state, username: e.detail.value || ''})}></IonInput>
+                        {errorUsername && <div>{errorUsername}</div>}
                         <IonInput type="password" placeholder="Password" id="password" value={password}
                         onIonChange={e => setState({...state, password: e.detail.value || ''})}></IonInput>
-
+                        {errorPassword && <div>{errorPassword}</div>}
                         <IonLoading isOpen={isAuthenticating}></IonLoading>
                         <IonButton color="medium" shape="round" onClick={handleLogin}>Sign in</IonButton>
                         {authenticationError && (
-                            <div>{'Wrong username or password'}</div>
+                            <div>{'Invalid login, please try again.'}</div>
                         )}
                     </IonCardContent>
                 </IonCard>

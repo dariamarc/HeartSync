@@ -1,4 +1,4 @@
-import React, {useContext, useRef} from "react";
+import React, {useContext, useRef, useState} from "react";
 import {RouteComponentProps} from "react-router";
 import {Header} from "../layout/Header";
 import {Footer} from "../layout/Footer";
@@ -18,9 +18,14 @@ import {informationCircle} from "ionicons/icons";
 import {ScansContext} from "./ScanProvider";
 import Scan from "./Scan";
 
+interface ScansHomeState {
+    scanNo?: string
+}
+
 
 export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
     const {scans, fetching, fetchingError, saveScan, saving, savingError} = useContext(ScansContext);
+    const [state, setState] = useState<ScansHomeState>({});
 
     interface InternalValues {
         file: any;
@@ -41,19 +46,23 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
         console.log(values.current.file)
         let formData = new FormData();
         formData.append("file", values.current.file);
-        //console.log(formData.get("file"));
         try {
                 saveScan?.(formData);
-
         } catch (err) {
             console.log(err);
         }
     };
 
+    function handleGotoScan(){
+        history.push(`/scan/${state.scanNo}`);
+    }
+
     return (
         <IonPage>
             <Header></Header>
             <IonContent color="light">
+                <IonInput placeholder='Input scan number shared with user' onIonChange={(e) => {setState({...state, scanNo: e.detail.value || ''})}}></IonInput>
+                <IonButton color="medium" shape="round" onClick={() => {handleGotoScan()}}>Go to scan</IonButton>
                 <div>
                     <IonCard className="upload-card">
                         <IonCardTitle className="card-center"><h4>Upload a file now</h4></IonCardTitle>
@@ -64,6 +73,7 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
                                 <IonIcon icon={informationCircle}></IonIcon>
                                 <h6 className="card-center">Accepted format: .nii.gz</h6>
                             </IonItem>
+                            {savingError && (<div>Invalid file. Upload only .nii.gz format!</div>)}
                         </IonCardContent>
                     </IonCard>
                     <h6 className="card-center">or</h6>
@@ -75,13 +85,13 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
                                 history.push(`/scan/${id}`)}
                                 } name={name} username={username} fileid={fileid} key={id}/>)}
                             </IonList>)}
-                            {!scans && (<IonItem className="card-center"><h5>You have no saved models. Upload a file to create one.</h5></IonItem>)}
+                            {scans?.length==0 && (<IonItem className="card-center"><h5>You have no saved models. Upload a file to create one.</h5></IonItem>)}
                         </IonCardContent>
                     </IonCard>
-                    <IonLoading isOpen={saving} message="Uploading scan..." />
+                    <IonLoading isOpen={saving} message="Uploading scan. This may take a while." />
                 </div>
             </IonContent>
-            <Footer></Footer>
+            {/*<Footer></Footer>*/}
         </IonPage>
     )
 }

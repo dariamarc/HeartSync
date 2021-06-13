@@ -12,12 +12,11 @@ interface FileResponse {
 export const fileConfig = (token?: string) => ({
     headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-        responseType: "arraybuffer"
+        Authorization: `Bearer ${token}`
     }
 });
 
-export const getFile:(token: string, fileid:number) => Promise<FileResponse> = async (token, fileid) => {
-    const getFileUrl = filesUrl + `get/${fileid}`;
+export const getFile:(token: string, scanid:number) => Promise<FileResponse> = async (token, scanid) => {
+    const getFileUrl = filesUrl + `get/${scanid}`;
     return withLogs(axios.get(getFileUrl, fileConfig(token)), 'getFile');
 }

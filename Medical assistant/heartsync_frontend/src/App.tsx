@@ -21,11 +21,10 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import {Welcome} from "./welcome/Welcome";
-import React, {lazy} from "react";
+import React from "react";
 import {Login} from "./auth/Login";
 import {Signup} from "./auth/Signup";
 import {ScansHome} from "./scans/ScansHome";
-// import {ScanDetails} from "./scans/ScanDetails";
 import {AuthProvider} from "./auth/AuthProvider";
 import {PrivateRoute} from "./auth/PrivateRoute";
 import {Confirm} from "./auth/Confirm";

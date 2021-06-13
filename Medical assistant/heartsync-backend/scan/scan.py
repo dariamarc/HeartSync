@@ -8,7 +8,11 @@ class Scan:
         self.fileid = fileid
         self.name = name
 
-    def get_scan(self):
+    def get_data(self):
+        """
+        Return scan data in dictionary format
+        :return:
+        """
         data = {
             'id': self.id,
             'username': self.username,

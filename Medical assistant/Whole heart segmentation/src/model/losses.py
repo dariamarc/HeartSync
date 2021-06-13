@@ -1,5 +1,5 @@
 import configparser
-
+from keras import backend as K
 import tensorflow as tf
 import numpy as np
 
@@ -54,3 +54,9 @@ def loss_fn(gr_truth, pred):
     :return: loss value
     """
     return dice_loss(pred, gr_truth) + softmax_weighted_loss(pred, gr_truth)
+
+def dice_coef(y_true, y_pred):
+        smooth = 1
+        intersection = K.sum(y_true * y_pred, axis=-1)
+        suma = (K.sum(K.square(y_true), -1) + K.sum(K.square(y_pred), -1) + smooth)
+        return (2 * intersection + smooth) / suma

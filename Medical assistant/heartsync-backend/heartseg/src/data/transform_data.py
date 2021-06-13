@@ -143,7 +143,7 @@ def rename_label(label, lab_r_data, rename_map):
 def prepare_test_image(image, input_shape):
     image = resize_image(image, input_shape[0])
     image = normalize_img(image)
-    image = np.reshape(image, (1, input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
+    # image = np.reshape(image, (1, input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
 
     return image
 

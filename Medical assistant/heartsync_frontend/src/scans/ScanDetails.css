@@ -1,25 +1,121 @@
-.left-content{
-    width: 50%;
+.flex-page-home {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    float: left;
+    background-color: #353535;
 }
 
-.text{
-    border-style: solid;
-    border-color: #284B63;
-    border-radius: 10px;
+.fullscreen-home {
+    height: 100%;
 }
+
+.grid-page {
+    width: 100%;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.first-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+    /*border-style: solid;*/
+}
+
+.top-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    /*border-style: solid;*/
+}
+
+.text-div{
+    /*text-align:left;*/
+    /*float:left;*/
+    display:inline;
+}
+
+.text-class{
+    background-color: #353535;
+    border-style: solid;
+    border-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.comments {
+    flex: 1;
+    height: auto;
+}
+
+.list-size {
+    height: 40vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/*.left-content{*/
+/*    width: 50%;*/
+/*    !*height: 100%;*!*/
+/*    display: flex;*/
+/*    height: 60vh;*/
+/*    float: left;*/
+/*}*/
+
+/*.inside-content{*/
+/*    display: flex;*/
+/*    max-height: 50vh;*/
+/*}*/
+
+/*.inside-content-right{*/
+/*    !*display: flex;*!*/
+/*    border-style: solid;*/
+/*    height: 80%;*/
+
+/*}*/
+
+/*.text{*/
+/*    border-style: solid;*/
+/*    border-color: #284B63;*/
+/*    border-radius: 10px;*/
+/*    height: 25vh;*/
+/*    !*height: 200px;*!*/
+/*}*/
+
 
 .top-content{
-    float: top;
-    max-height: 90%;
+    position: fixed;
+    height: 50%;
+    top: 0;
+    width:100%;
+    border-style: solid;
+    border-color: #3a7be0;
+    margin-top: 30px;
+    /*float: top;*/
+    /*display: flex;*/
+    /*max-height: 90%;*/
+    /*min-height: 60vh;*/
+
 }
 
-.right-content{
-    width: 50%;
-    height: 100%;
-    float: right;
+/*.right-content{*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    float: right;*/
+/*}*/
+
+.bottom-content{
+    position: fixed;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: #2dd36f;
+    /*float: bottom;*/
+    /*display: flex;*/
+    /*max-height: 90%;*/
+    /*min-height: 60vh;*/
 }
-.page{
-    height: 100%;
-}
+

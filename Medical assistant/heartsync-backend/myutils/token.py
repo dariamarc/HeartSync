@@ -1,11 +1,11 @@
 import jwt
 import datetime
-from utils.config import Config
+from myutils.config import Config
 from itsdangerous import URLSafeTimedSerializer
 
 def encode_auth_token(user_id):
     """
-    Generates the Auth Token
+    Generates the Authentication token by username
     :return: string
     """
     try:
@@ -26,8 +26,8 @@ def encode_auth_token(user_id):
 @staticmethod
 def decode_auth_token(auth_token, app):
     """
-    Decodes the auth token
-    :param auth_token:
+    Decodes the authentication token
+    :param auth_token: token
     :return: integer|string
     """
     try:
@@ -40,11 +40,24 @@ def decode_auth_token(auth_token, app):
 
 
 def generate_confirmation_token(email, app):
+    """
+    Generates email confirmation token
+    :param email:
+    :param app:
+    :return:
+    """
     serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
     return serializer.dumps(email, salt=app.config['SECURITY_PASSWORD_SALT'])
 
 
 def confirm_token(token, app, expiration=3600):
+    """
+    Confirms email confirmation token
+    :param token: email token
+    :param app: reference to flask server
+    :param expiration: expiration time of token
+    :return:
+    """
     serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
     try:
         email = serializer.loads(

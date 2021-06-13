@@ -13,7 +13,8 @@ class DataLoader:
     def __init__(self):
         config = configparser.ConfigParser()
         config.read('heartseg/model/init/model.ini')
-        self.data_path = config.get('MODEL_INIT', 'DATA_DIR')
+        # self.data_path = config.get('MODEL_INIT', 'DATA_DIR')
+        self.data_path = "../data"
 
     def load_training_data(self):
         """
@@ -38,7 +39,7 @@ class DataLoader:
     def load_training_data_clahe(self):
         """
             Loads CT images and labels used for training the model that had CLAHE applied. The images are of type .nii.gz
-            :return: list of all test images
+            :return: list of all mytest images
         """
         data_dir = os.path.join('..', 'data')
         all_images = glob(os.path.join(data_dir, 'processed\\clahe', '*_image_lps_clahe.nii'))
@@ -66,7 +67,7 @@ class DataLoader:
     def load_testing_data(self):
         """
         Loads CT images used for testing the model. The images are of type .nii.gz
-        :return: list of all test images
+        :return: list of all mytest images
         """
         data_dir = os.path.join('..', 'data')
         all_images = glob(os.path.join(data_dir, 'raw\\ct_test', '*_image.nii.gz'))

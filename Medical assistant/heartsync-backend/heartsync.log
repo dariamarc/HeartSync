@@ -1,849 +1,524 @@
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug: * Debugger PIN: 246-181-305
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:02:43] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:02:43] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 409 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:07:35] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:07:35] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 409 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:08:46] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:08:46] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 409 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:11:33] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:11:33] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 409 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:11:59] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 13:12:00] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:12:22] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:12:23] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:14:52] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:14:53] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:43:28] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 15:43:29] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:12:54] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:12:55] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:15:40] "[35m[1mOPTIONS /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:16:34] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:16:35] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:20:47] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:20:47] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:21:05] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:21:06] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:21:25] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:21:26] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:22:33] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:22:33] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\email.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:39:01] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:39:02] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:39:53] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:39:53] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\email.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:40:17] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:40:17] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\email.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:40:56] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:40:57] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:49:39] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:49:39] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\email.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:49:56] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:49:57] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:50:42] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:50:43] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:51:30] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:51:31] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:52:28] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:52:30] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:55:20] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:55:20] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\config.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:55:40] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 16:55:42] "[37mPOST /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:29:01] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:29:03] "[37mPOST /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:37:34] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:37:34] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:38:44] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:38:45] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:40:55] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:40:56] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:41:42] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:41:42] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:42:07] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:42:07] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:42:26] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:42:26] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:43:10] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:43:10] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:43:51] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:43:51] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:50:09] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:50:12] "[37mPOST /api/auth/signup HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:50:56] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:50:56] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:51:35] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:51:35] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\utils\\token.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:52:29] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:52:29] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:28:55] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:28:55] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:29:07] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:29:07] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:32:16] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:32:16] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:33:08] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:33:08] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:34:38] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:34:38] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:36:09] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:36:09] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:37:25] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:37:25] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:54:54] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:54:54] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:46:42] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:46:42] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:48:00] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:48:01] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:49:32] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:49:32] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:50:02] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:50:02] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:50:50] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:50:50] "[31m[1mPOST /api/auth/signup HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:52:37] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:52:38] "[35m[1mPOST /api/auth/signup HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_service.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:56:43] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:56:44] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:53:48] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:53:48] "[37mPOST /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_service.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:59:54] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 22:59:55] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:01:24] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:01:24] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:02:28] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:02:28] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:04:10] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:04:10] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:05:23] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:05:23] "[31m[1mPOST /api/auth/confirm HTTP/1.1[0m" 409 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:07:25] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:07:25] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:08:10] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:08:11] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:10] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:11] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:18] "[37mOPTIONS /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [05/Jun/2021 23:09:19] "[37mPOST /api/auth/confirm HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:45:59] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:46:43] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:47:10] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:57:29] "[37mOPTIONS /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:57:29] "[37mPOST /api/auth/signup HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:58:17] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 13:58:18] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:02:11] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:02:11] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:04:11] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:04:11] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:04:32] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:04:32] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:05:10] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:05:10] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:05:32] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:05:32] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:06:05] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:06:06] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:06:42] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:06:42] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:47:49] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:07:36] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:07:37] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:48:15] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:08:04] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:08:04] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:08:26] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:08:26] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:09:03] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:09:03] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:09:27] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:09:28] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:10:00] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:10:01] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:10:01] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:10:01] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:48:41] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:11:51] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:11:51] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:49:54] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:50:15] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:51:24] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:52:45] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:54:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:57:40] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 19:58:39] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:00:02] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:03:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:15:02] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:15:43] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:24:00] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:26:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:28:52] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:31:51] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:33:41] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:42:37] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:43:42] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:44:17] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:45:38] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:02] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:16] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:46:31] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:50:09] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:05] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:27] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 20:51:48] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:09:46] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:10:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:11:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\user\\user_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:28:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:52:07] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:53:06] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\data\\load_data.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:53:25] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 21:56:56] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:04:09] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:24:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:24:57] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:26:22] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:26:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:27:24] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:28:11] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:35:53] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:36:52] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:37:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/model_name_from_config\{saved_model.pbtxt|saved_model.pb}
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:40:35] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/heartseg_model_v2.h5\{saved_model.pbtxt|saved_model.pb}
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:41:36] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
-INFO:werkzeug: * Restarting with stat
-ERROR:root:Error loading model SavedModel file does not exist at: ../model/init/heartseg_model_v2.h5\{saved_model.pbtxt|saved_model.pb}
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:43:09] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:44:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:48:37] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:49:18] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:52:16] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:53:05] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:54:16] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\heartseg\\src\\model\\model.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 22:57:53] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:04:40] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:05:57] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:10:27] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:11:18] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:46:02] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [09/Jun/2021 23:46:02] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:46:01] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:46:35] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:47:15] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:49:11] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:50:48] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:51:19] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:51:57] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 18:57:46] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:10:03] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:11:07] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:12:06] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:12:06] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:11:59] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:12:11] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:21:51] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:21:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:56:02] "[35m[1mGET /api/files/get HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 19:56:34] "[37mGET /api/files/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:08:54] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:10:33] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 21:11:31] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 22:58:21] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:13:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:13:27] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:14:00] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:15:04] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:15:05] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:39] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:40] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:17:43] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:23:31] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:23:38] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:25:29] "[35m[1mGET /api/scans/get HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:25:53] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:28:28] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:28:29] "[31m[1mGET /api/scans/get HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:29:04] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:29:04] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:36] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:36] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:30:56] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:27] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:27] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:31:31] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:32:44] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:33:55] "[35m[1mGET /api/scans/get HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:25] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:33] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:34:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:35:30] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:35:30] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:42:14] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [10/Jun/2021 23:42:14] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:07:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:07:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:23:14] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:23:14] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:47:50] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:47:50] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:50:40] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 01:50:40] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:00:01] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:00:01] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:00:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:00:26] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:12:33] "[31m[1mGET /api/files/get HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:12:51] "[37mGET /api/files/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:05] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:05] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:23] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:23] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:56] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:13:56] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:14:21] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:14:21] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:16:22] "[37mOPTIONS /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:16:22] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:17:26] "[37mOPTIONS /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:18:49] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:18:49] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:18:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:18:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:23:44] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:23:58] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:23:58] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:23:58] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:23:58] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:30] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:30] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:30] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:31] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:34] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:40] "[37mOPTIONS /api/files/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:24:43] "[37mGET /api/files/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:26:11] "[37mOPTIONS /api/notes/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:26:12] "[37mPOST /api/notes/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:26:51] "[37mOPTIONS /api/notes/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:26:51] "[37mPOST /api/notes/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:27:40] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:27:40] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 02:14:16] "[33mGET /api/files/get HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:29:33] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:29:33] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 12:17:11] "[37mGET /api/files/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 12:37:08] "[37mGET /api/files/get/13 HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 12:45:17] "[35m[1mGET /api/files/get/13 HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 12:46:30] "[35m[1mGET /api/files/get/13 HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 17:59:01] "[35m[1mGET /api/files/get/13 HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 18:02:39] "[37mGET /api/files/get/13 HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 18:07:42] "[35m[1mGET /api/files/get/13 HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 18:13:18] "[37mGET /api/files/get/13 HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 18:14:05] "[37mGET /api/files/get/13 HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:35:09] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:35:10] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:36:01] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:36:01] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:37:06] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:37:06] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:37:55] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:37:55] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:40:25] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:40:26] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:41:44] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:41:44] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:41:56] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:41:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:10] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:10] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:40] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:41] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:52] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:45:52] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:59:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 19:59:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:03:06] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:03:06] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:06:54] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:06:54] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:08:20] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:08:20] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:09:12] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:09:12] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:09:59] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:10:00] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:12:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:12:27] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:21:16] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:21:16] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:21:21] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:21:39] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:21:39] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:42:43] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:42:43] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:43:12] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:43:12] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:43:43] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:43:43] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:48:41] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:48:41] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:51:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:51:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:52:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:52:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:04] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:04] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:15] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:15] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:51] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:53:51] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:25] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:25] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:36] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:37] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:46] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:47] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:56] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:54:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:55:02] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:55:02] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:55:09] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:55:09] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:56:18] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:56:18] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:59:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 20:59:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:00:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:00:26] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:01:33] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:01:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:07:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:07:34] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:07:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:07:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:08:15] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:08:15] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:38] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:39] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:48] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:57] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:11:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:19:57] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:19:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:32] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:37] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:46] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:46] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:53] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:23:54] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:30:17] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:30:17] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:33:22] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:33:22] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:34:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:34:34] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:34:59] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:34:59] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:36:45] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:36:46] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:53:54] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:53:55] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:56:05] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:56:05] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:59:52] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 21:59:52] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:00:15] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:00:15] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:03:37] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:03:38] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:10:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:10:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:30:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:30:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:32:47] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:32:47] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:37:36] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:37:36] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:43] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:43] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:53] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:53] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 22:39:55] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:27:13] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:27:13] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:37:26] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:37:26] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:38:19] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:38:19] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:38:46] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:38:46] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:48:40] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:48:40] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:51:38] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:51:38] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:54:31] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:54:31] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:58:38] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2021 23:58:38] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:11:35] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:11:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:18:27] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:18:28] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:23:32] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:23:32] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:24:47] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 00:24:47] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 08:57:39] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 08:57:39] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:03:19] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:03:19] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:04:12] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:04:12] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:04:19] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:04:57] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:04:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:07:32] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:07:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:07:33] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:07:39] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:09:01] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 09:09:02] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:37:49] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:38:14] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:38:58] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:35] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:37] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:38] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:38] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:38] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:38] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:44] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:30:44] "[31m[1mPOST /api/comments/add/49 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:10] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:10] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:10] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:10] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:12] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:13] "[31m[1mPOST /api/comments/add/49 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:41] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:36:41] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:40:09] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:07] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:44] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:45] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:45] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:42:45] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:43:04] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:43:05] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:33] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:33] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:33] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:33] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:38] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:44:38] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:45:05] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:45:06] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:45:06] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:45:06] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:46:51] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:46:51] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:20] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:20] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:21] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:21] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:21] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:48:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:10] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:10] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:10] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:10] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:10] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:13] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:13] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:23] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:23] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:23] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:23] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:23] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:29] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:49:29] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:19] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:19] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:20] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:20] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:20] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:27] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:52:28] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:44] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:44] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:45] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:45] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:45] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:47] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:54:47] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:12] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:12] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:12] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:12] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:12] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:14] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:14] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:14] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:15] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:15] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:41] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:55:41] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:21] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:21] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:58] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:58] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:58] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:58] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:56:58] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:00] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:00] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:16] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:16] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:16] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:16] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:16] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:18] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:19] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:44] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:44] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:44] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:45] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:45] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:52] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:57:53] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:01] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:01] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:01] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:02] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:02] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:04] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:05] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:05] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 14:59:05] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:11] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:11] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:11] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:12] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:12] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:12] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:03:48] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:39:41] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:56] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:56] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:56] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:56] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:57] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:04:57] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:40:22] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:40:55] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:42:44] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:45:57] "[35m[1mPOST /api/scans/add HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\scan\\scan_repo.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:52:16] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:52:53] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:52:53] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:53:38] "[37mOPTIONS /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:53:44] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 415 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:58:05] "[37mOPTIONS /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:58:10] "[31m[1mPOST /api/scans/add HTTP/1.1[0m" 415 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\marc_\\Documents\\Licenta\\Medical assistant\\heartsync-backend\\file\\file_service.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:58:59] "[37mOPTIONS /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:59:39] "[37mPOST /api/scans/add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:59:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2021 10:59:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:23] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:30] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:31] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:31] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:31] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:31] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:06:31] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:28] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:28] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:35] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:35] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:35] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:36] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:07:36] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:08:24] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:08:24] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:11:16] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:11:16] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:16:19] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:16:19] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:07] "[37mOPTIONS /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:07] "[37mPOST /api/auth/login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:07] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:07] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:20] "[37mOPTIONS /api/notes/get/8 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:21] "[37mOPTIONS /api/comments/get/8 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:21] "[37mGET /api/notes/get/8 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:21] "[37mGET /api/comments/get/8 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:21] "[37mGET /api/notes/get/8 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:35] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:17:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:27:53] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:27:53] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:27:53] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:27:53] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:27:53] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:08] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:08] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:08] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:08] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:08] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:40] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:40] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:52] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:28:52] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:27] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:27] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:27] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:27] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:48] "[37mOPTIONS /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:29:48] "[37mPOST /api/comments/add/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:31] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:31] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:31] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:31] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:31] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:54] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:30:54] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:32:03] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:32:03] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:32:03] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:32:03] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:36] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:37] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:38] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:39] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:39] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:39] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:33:39] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:07] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:07] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:11] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:11] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:11] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:11] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:12] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:49] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:49] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:51] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:51] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:51] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:51] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:38:51] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:40:17] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:40:17] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:40:17] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:40:17] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:42:23] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:42:23] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:42:24] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:42:24] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:30] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:30] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:30] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:30] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:34] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:34] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:36] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:37] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:37] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:37] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:43:37] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:09] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:09] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:09] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:09] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:23] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:24] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:24] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:24] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:38] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:38] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:38] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:39] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:45] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:46] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:46] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 15:44:46] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:14] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:14] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:16] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:16] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:16] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:17] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:11:17] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:14:29] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:14:29] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:14:29] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:14:29] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:22:02] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:22:02] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:22:02] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:22:02] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:00] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:01] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:01] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:01] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:51] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:51] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:51] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:23:51] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:06] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:06] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:06] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:07] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:16] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:16] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:16] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:16] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:28] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:28] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:28] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:24:29] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:05] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:05] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:05] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:05] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:17] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:17] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:17] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:25:18] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:25] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:25] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:25] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:25] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:38] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:39] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:39] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:29:39] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:32:16] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:32:16] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:32:16] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:32:16] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:33:38] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:33:38] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:33:38] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:33:38] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:33:59] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:00] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:00] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:00] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:22] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:22] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:22] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:22] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:38] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:38] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:38] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:39] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:59] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:59] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:59] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:34:59] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:35:08] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:35:09] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:35:09] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:35:09] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:37:11] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:37:11] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:17] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:17] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:17] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:18] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:18] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:51] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:52] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:52] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:38:52] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:39:11] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:39:11] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:39:12] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 16:39:12] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:21] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:21] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:21] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:21] "[35m[1mGET /api/notes/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:22] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:22] "[35m[1mGET /api/comments/get/49 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:35] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:35] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:39] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:39] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:39] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:39] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:23:39] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:11] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:11] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:15] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:15] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:15] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:15] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:15] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:29] "[37mOPTIONS /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:29] "[37mGET /api/scans/get HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:32] "[37mOPTIONS /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:32] "[37mOPTIONS /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:32] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:33] "[37mGET /api/comments/get/49 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2021 18:54:33] "[37mGET /api/notes/get/49 HTTP/1.1[0m" 200 -

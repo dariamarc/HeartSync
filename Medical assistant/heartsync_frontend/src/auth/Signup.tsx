@@ -51,7 +51,7 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
         validateLastName(lastname || '');
         validatePassword(password || '');
         validateRepeatPassword(password || '');
-        if (errorEmail.length === 0 && errorFirstName.length === 0 && errorLastName.length === 0 && errorPassword.length === 0 && errorRepeatPassword.length === 0 && errorUsername.length === 0) {
+        if (errorEmail.length == 0 && errorFirstName.length == 0 && errorLastName.length == 0 && errorPassword.length == 0 && errorRepeatPassword.length == 0 && errorUsername.length == 0) {
             signup?.(username, password, email, firstname, lastname);
         }
     };
@@ -64,8 +64,6 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
     function validateUsername(username: string): void {
         if (username === '') {
             setErrorUsername('Username must not be empty');
-        } else if (message?.includes('Username') || message?.includes('username')) {
-            setErrorUsername(message);
         }
     }
 
@@ -107,7 +105,7 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
 
     function validateLastName(lastName: string): void {
         if (lastName === '') {
-            setErrorFirstName('Lastname must not be empty');
+            setErrorLastName('Lastname must not be empty');
         }
     }
 
@@ -139,7 +137,7 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
                                   onIonChange={e => setState({...state, repeat_password: e.detail.value || ''})}></IonInput>
                         {errorRepeatPassword && <div>{errorRepeatPassword}</div>}
                         <IonButton color="medium" shape="round" onClick={handleSignUp}>Create account</IonButton>
-                        {signupError && <div>Username already exists</div>}
+                        {signupError && <div>Error signing up. Check your credentials and try again.</div>}
                     </IonCardContent>
                 </IonCard>
             </IonContent>

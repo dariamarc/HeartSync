@@ -1,10 +1,10 @@
 from flask import jsonify, url_for, render_template
-from sqlalchemy import Table
+from sqlalchemy import Table, delete
 from sqlalchemy import select, update
 from user.user import User
 from passlib.hash import pbkdf2_sha256
-from utils.email import send_email
-from utils.token import encode_auth_token, generate_confirmation_token, confirm_token
+from myutils.email import send_email
+from myutils.token import encode_auth_token, generate_confirmation_token, confirm_token
 
 
 class UserRepo:
@@ -59,11 +59,6 @@ class UserRepo:
         ins = self.users.insert().values(username=username, password=password, email=email, firstname=firstname, lastname=lastname, confirmed=False)
         result = self.con.execute(ins)
 
-        token = generate_confirmation_token(email, self.app)
-        confirm_url = "localhost:8100/confirm/" + token
-        html = render_template('confirmation_email.html', confirm_url=confirm_url)
-        subject = "Please confirm your email"
-        send_email(email, subject, html, self.app, self.mail)
 
         return result.inserted_primary_key
 
@@ -74,4 +69,13 @@ class UserRepo:
             user = User(row[0], row[1], row[2], row[3], row[4], row[5])
 
         return user
+
+    def delete_user(self, username):
+        """
+        Deletes user with username
+        :param id: id of scan
+        :return:
+        """
+        deldb = delete(self.users).where(self.users.c.username == username)
+        self.con.execute(deldb)
 
