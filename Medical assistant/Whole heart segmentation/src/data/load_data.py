@@ -75,8 +75,8 @@ class DataLoader:
         print(len(all_images), ' matching files found:', all_images[0])
 
         images = []
-        # for i in range(len(all_images)):
-        for i in range(1):
+        for i in range(len(all_images)):
+        # for i in range(1):
             image = nib.load(all_images[i]).get_fdata()
             images.append(image)
 

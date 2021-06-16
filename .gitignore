@@ -3,6 +3,7 @@ MedicalDataAugmentationTool-MMWHS-master
 Bibliografie.docx
 U-net architecture.png
 Medical assistant/MM-WHS 2017 Dataset.zip
+Medical assistant/Whole heart segmentation
 Medical assistant/training.zip
 Medical assistant/wholeheartseg_v2
 Medical assistant/Whole heart segmentation/data
@@ -10,3 +11,5 @@ Medical assistant/Whole heart segmentation/src/model/localization_cnn.py
 Medical assistant/Whole heart segmentation/src/model/segmentation_cnn.py
 Thesis
 Medical assistant/heartsync-backend/heartseg/data
+Medical assistant/heartsync-backend/file/files
+Medical assistant/heartsync-backend/heartseg/model/init

@@ -6,11 +6,13 @@ import cv2
 import numpy as np
 import skimage.exposure
 from matplotlib import pyplot as plt
+from numpy import sort
 from scipy import ndimage
 from scipy.ndimage import zoom
 from scipy.ndimage import rotate
 import tensorflow as tf
 from nipype.interfaces.image import Reorient
+from skimage.transform import resize, rescale
 
 from src.data.utils_data import show_slices
 from src.utils.exception import PreprocessException
@@ -85,7 +87,7 @@ def rotate_image(image, label):
     return image, label
 
 
-def resize_data(img_data, labels_data, size):
+def crop_data(img_data, labels_data, size):
     """
     Resize all images and labels from image list and label list
     :param img_data: list of images
@@ -121,9 +123,8 @@ def resize_data(img_data, labels_data, size):
         if lenny >= 7:
             cropped = True
 
-    lab_r_data = np.zeros(label_temp.shape, dtype='int32')
 
-    return img_temp, label_temp, lab_r_data
+    return img_temp, label_temp
 
 
 def rename_label(label, lab_r_data, rename_map):
@@ -141,9 +142,9 @@ def rename_label(label, lab_r_data, rename_map):
 
 
 def prepare_test_image(image, input_shape):
-    image = resize_image(image, input_shape[0])
+    image = resize(image, [64, 64, 64], order=0, preserve_range=True, anti_aliasing=False)
     image = normalize_img(image)
-    # image = np.reshape(image, (1, input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
+    image = np.reshape(image, (1, input_shape[0], input_shape[1], input_shape[2], input_shape[3]))
 
     return image
 
@@ -165,8 +166,17 @@ def preprocess_data(data, labels, input_shape):
 
     for i in range(len(data)):
         try:
-            img_data, label, label_r = resize_data(data[i], labels[i], int(input_shape[0]))
-            label_r = rename_label(label, label_r, rename_map)
+            resize_r = 0.6
+            sh = data[i].shape
+            resize_dim = (np.array(sh[0])).astype('int')
+            img_data = resize(data[i], [64, 64, 64], order=0, preserve_range=True, anti_aliasing=False)
+            lab_data = resize(labels[i], [64, 64, 64], order=0, preserve_range=True, anti_aliasing=False)
+
+            lab_r_data = np.zeros(lab_data.shape, dtype='int32')
+            label_r = rename_label(lab_data, lab_r_data, rename_map)
+
+            # img_data, label_r = crop_data(img_data, label_r, int(input_shape[0]))
+
             img_data = normalize_img(img_data)
             images.append(img_data)
             labels_proc.append(label_r)

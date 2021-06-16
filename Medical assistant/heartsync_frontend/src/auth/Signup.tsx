@@ -28,7 +28,7 @@ interface SignUpState {
 
 export const Signup: React.FC<RouteComponentProps> = ({history}) => {
 
-    const {isSigned, isSigning, signup, signupError, message} = useContext(SignUpContext);
+    const {isSigned, isSigning, signup, signupError, signupMessage} = useContext(SignUpContext);
     const [state, setState] = useState<SignUpState>({});
     const {email, firstname, lastname, username, password, repeat_password} = state;
     const [errorUsername, setErrorUsername] = useState('');
@@ -62,16 +62,16 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
 
 
     function validateUsername(username: string): void {
-        if (username === '') {
+        if (username == '' || username == undefined) {
             setErrorUsername('Username must not be empty');
         }
     }
 
     function validatePassword(password: string): void {
-        if (password.length >= 8) {
+        if (password.length >= 5) {
             setErrorPassword('');
         } else if (password.length >= 3) {
-            const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])");
+            const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.*[.!@#$%^&*])");
             if (strongRegex.test(password)) {
                 setErrorPassword('');
             }
@@ -90,7 +90,7 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
     }
 
     function validateEmail(email: string): void {
-        if (email === '') {
+        if (email == '' || email == undefined) {
             setErrorEmail('Email must not be empty');
         } else if (email.indexOf('@') === -1) {
             setErrorEmail('Email must contain \'@\'');
@@ -98,20 +98,20 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
     }
 
     function validateFirstName(firstName: string): void {
-        if (firstName === '') {
+        if (firstName == '' || firstName == undefined) {
             setErrorFirstName('Firstname must not be empty');
         }
     }
 
     function validateLastName(lastName: string): void {
-        if (lastName === '') {
+        if (lastName == '' || lastName == undefined) {
             setErrorLastName('Lastname must not be empty');
         }
     }
 
     return (
         <IonPage>
-            <Header></Header>
+            <Header/>
             <IonContent color="light">
                 <IonCard className="signup-card">
                     <IonCardTitle className="card-center">
@@ -119,25 +119,25 @@ export const Signup: React.FC<RouteComponentProps> = ({history}) => {
                     </IonCardTitle>
                     <IonCardContent className='card-center'>
                         <IonInput placeholder="Username" value={username}
-                                  onIonChange={e => setState({...state, username: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, username: e.detail.value || ''})}/>
                         {errorUsername && <div>{errorUsername}</div>}
                         <IonInput placeholder="First name" value={firstname}
-                                  onIonChange={e => setState({...state, firstname: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, firstname: e.detail.value || ''})}/>
                         {errorFirstName && <div>{errorFirstName}</div>}
                         <IonInput placeholder="Last name" value={lastname}
-                                  onIonChange={e => setState({...state, lastname: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, lastname: e.detail.value || ''})}/>
                         {errorLastName && <div>{errorLastName}</div>}
                         <IonInput placeholder="Email" value={email}
-                                  onIonChange={e => setState({...state, email: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, email: e.detail.value || ''})}/>
                         {errorEmail && <div>{errorEmail}</div>}
                         <IonInput type="password" placeholder="Password" value={password}
-                                  onIonChange={e => setState({...state, password: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, password: e.detail.value || ''})}/>
                         {errorPassword && <div>{errorPassword}</div>}
                         <IonInput type="password" placeholder="Confirm password" value={repeat_password}
-                                  onIonChange={e => setState({...state, repeat_password: e.detail.value || ''})}></IonInput>
+                                  onIonChange={e => setState({...state, repeat_password: e.detail.value || ''})}/>
                         {errorRepeatPassword && <div>{errorRepeatPassword}</div>}
                         <IonButton color="medium" shape="round" onClick={handleSignUp}>Create account</IonButton>
-                        {signupError && <div>Error signing up. Check your credentials and try again.</div>}
+                        {signupError && <div>{signupMessage}</div>}
                     </IonCardContent>
                 </IonCard>
             </IonContent>

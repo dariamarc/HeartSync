@@ -9,7 +9,7 @@ from heartseg.src.model.model import UnetModel
 class FileService:
     def __init__(self, file_repo):
         self.file_repo = file_repo
-        self.heart_segmenter = UnetModel('heartseg_model_v2.h5')
+        self.heart_segmenter = UnetModel('heartsegmodel_lucky.h5', mode='test')
 
     def check_file_type(self, file):
         """
@@ -21,7 +21,7 @@ class FileService:
             return True
         return False
 
-    def segment_image(self, image):
+    def process_file(self, image):
         """
         Get the image segmentation result
         :param image: image to be segmented
@@ -29,7 +29,7 @@ class FileService:
         """
         if image is not None:
             image = image.get_fdata()
-            result = self.heart_segmenter.test_model(image)
+            result = self.heart_segmenter.process_image(image)
             file_path, file_size = self.save_image_file(result)
             file_type = 'obj'
             file_id = self.file_repo.insert_file(file_path, file_type, file_size)

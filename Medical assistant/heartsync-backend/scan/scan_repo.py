@@ -1,8 +1,6 @@
 import json
-
 from sqlalchemy import Table, delete
 from sqlalchemy import select
-
 from scan.scan import Scan
 
 
@@ -37,7 +35,6 @@ class ScanRepo:
             scan = Scan(row[0], row[1], row[2], row[3])
 
         return scan
-
 
     def get_user_scans(self, username):
         """

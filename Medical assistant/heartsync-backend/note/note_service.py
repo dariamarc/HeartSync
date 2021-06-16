@@ -28,4 +28,4 @@ class NoteService:
         note = self.note_repo.get_note_by_scan(scan_id)
         if note != None:
             return note.get_data()
-        return None
+        return ''

@@ -16,7 +16,7 @@ export const fileConfig = (token?: string) => ({
     }
 });
 
-export const getFile:(token: string, scanid:number) => Promise<FileResponse> = async (token, scanid) => {
+export const getFile:(token: string, scanid:string) => Promise<FileResponse> = async (token, scanid) => {
     const getFileUrl = filesUrl + `get/${scanid}`;
     return withLogs(axios.get(getFileUrl, fileConfig(token)), 'getFile');
 }

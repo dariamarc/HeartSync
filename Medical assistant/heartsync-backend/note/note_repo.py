@@ -1,6 +1,5 @@
 from sqlalchemy import Table, delete
 from sqlalchemy import select, update
-
 from note.note import Note
 
 

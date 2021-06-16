@@ -1,10 +1,8 @@
-from flask import jsonify, url_for, render_template
 from sqlalchemy import Table, delete
 from sqlalchemy import select, update
 from user.user import User
 from passlib.hash import pbkdf2_sha256
-from myutils.email import send_email
-from myutils.token import encode_auth_token, generate_confirmation_token, confirm_token
+from myutils.token import encode_auth_token
 
 
 class UserRepo:
@@ -28,26 +26,16 @@ class UserRepo:
         query = select(self.users).where(self.users.c.username == username)
         user = None
         for row in self.con.execute(query):
-            user = User(row[0], row[1], row[2], row[3], row[4], row[5])
+            user = User(row[0], row[1], row[2], row[3], row[4])
 
         if user and pbkdf2_sha256.verify(password, user.password):
             auth_token = encode_auth_token(user.username)
-            update_query = update(self.users).where(self.users.c.username == username).values(token=auth_token.decode('utf-8'))
+            update_query = update(self.users).where(self.users.c.username == username).values(
+                token=auth_token.decode('utf-8'))
             self.con.execute(update_query)
             return auth_token
         else:
             return None
-
-    def confirm_email(self, email_token):
-        email = confirm_token(email_token, self.app)
-        if not email:
-            return False
-
-        upd = update(self.users).where(self.users.c.email == email).values(confirmed=True)
-        result = self.con.execute(upd)
-        if result:
-            return True
-        return False
 
     def signup(self, username, password, email, firstname, lastname):
         query = select(self.users).where(self.users.c.username == username)
@@ -56,9 +44,9 @@ class UserRepo:
             return None
 
         password = pbkdf2_sha256.hash(password)
-        ins = self.users.insert().values(username=username, password=password, email=email, firstname=firstname, lastname=lastname, confirmed=False)
+        ins = self.users.insert().values(username=username, password=password, email=email, firstname=firstname,
+                                         lastname=lastname)
         result = self.con.execute(ins)
-
 
         return result.inserted_primary_key
 
@@ -66,7 +54,7 @@ class UserRepo:
         query = select(self.users).where(self.users.c.token == token)
         user = None
         for row in self.con.execute(query):
-            user = User(row[0], row[1], row[2], row[3], row[4], row[5])
+            user = User(row[0], row[1], row[2], row[3], row[4])
 
         return user
 
@@ -78,4 +66,3 @@ class UserRepo:
         """
         deldb = delete(self.users).where(self.users.c.username == username)
         self.con.execute(deldb)
-

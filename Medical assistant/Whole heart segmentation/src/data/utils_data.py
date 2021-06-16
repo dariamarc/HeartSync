@@ -149,7 +149,7 @@ def save_image_file(image):
         now = datetime.now()
         dt_string = now.strftime("%d-%m-%Y-%H%M%S")
 
-        filename = 'try.obj'
+        filename = 'lucky.obj'
         # path = os.path.join('file\\files\\', filename)
         obj_file = open(filename, 'w')
         for item in verts:

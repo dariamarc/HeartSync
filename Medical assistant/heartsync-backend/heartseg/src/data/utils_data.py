@@ -1,8 +1,5 @@
-import copy
-
 import matplotlib.pyplot as plt
 import h5py
-import numpy as np
 from skimage import measure
 
 
@@ -32,107 +29,15 @@ def show_slices(slices):
     plt.show()
 
 
-def plot_images(test_image, test_labels):
-    print(test_image.shape)
-    # fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(48, 24))
-    # ax1.imshow(test_image[test_image.shape[0] // 2], cmap='gray')
-    # ax1.set_title('Image')
-    # ax2.imshow(test_labels[test_image.shape[0] // 2], cmap='gray')
-    # ax2.set_title('Labels')
-    plt.imshow(test_image[:, :, :, 1])
-    plt.imshow(test_labels[:, :, 5])
-    plt.show()
-
 def numpy_to_obj(numpy_data):
-
+    """
+    Convert 3D numpy array into a 3D mesh
+    :param numpy_data: numpy array
+    :return: vertices, faces, vector normals and values of the new 3D mesh
+    """
     verts, faces, normals, values = measure.marching_cubes_lewiner(numpy_data, 0)
     faces = faces + 1
 
     return verts, faces, normals, values
 
-def fit_cube_param(vol_dim, cube_size, ita):
-    dim = np.asarray(vol_dim)
-    # cube number and overlap along 3 dimensions
-    fold = dim / cube_size + ita
-    ovlap = np.ceil(np.true_divide((fold * cube_size - dim), (fold - 1)))
-    ovlap = ovlap.astype('int')
-
-    fold = np.ceil(np.true_divide((dim + (fold - 1)*ovlap), cube_size))
-    fold = fold.astype('int')
-
-    return fold, ovlap
-
-def decompose_data_to_cubes(image, batch_size, input_size, chn_size, ovl):
-    cube_list = []
-    # get parameters for decompose
-    fold, ovlap = fit_cube_param(image.shape, input_size, ovl)
-    dim = np.asarray(image.shape)
-
-    for R in range(0, fold[0]):
-        r_s = R*input_size - R*ovlap[0]
-        r_e = r_s + input_size
-        if r_e >= dim[0]:
-            r_s = dim[0] - input_size
-            r_e = r_s + input_size
-        for C in range(0, fold[1]):
-            c_s = C*input_size - C*ovlap[1]
-            c_e = c_s + input_size
-            if c_e >= dim[1]:
-                c_s = dim[1] - input_size
-                c_e = c_s + input_size
-            for H in range(0, fold[2]):
-                h_s = H*input_size - H*ovlap[2]
-                h_e = h_s + input_size
-                if h_e >= dim[2]:
-                    h_s = dim[2] - input_size
-                    h_e = h_s + input_size
-                # partition multiple channels
-                cube_temp = image[r_s:r_e, c_s:c_e, h_s:h_e]
-                cube_batch = np.zeros([batch_size, input_size, input_size, input_size, chn_size]).astype('float32')
-                cube_batch[0, :, :, :, 0] = copy.deepcopy(cube_temp)
-                # save
-                cube_list.append(cube_batch)
-
-    return cube_list
-
-def compose_cubes_to_vol(cube_list, vol_dim, cube_size, ita, class_n):
-    # get parameters for compose
-    fold, ovlap = fit_cube_param(vol_dim, cube_size, ita)
-    # create label volume for all classes
-    map_classes_mat = (np.zeros([vol_dim[0], vol_dim[1], vol_dim[2], class_n])).astype('float32')
-    cnt_classes_mat = (np.zeros([vol_dim[0], vol_dim[1], vol_dim[2], class_n])).astype('float32')
-
-    p_count = 0
-    for R in range(0, fold[0]):
-        r_s = R * cube_size - R * ovlap[0]
-        r_e = r_s + cube_size
-        if r_e >= vol_dim[0]:
-            r_s = vol_dim[0] - cube_size
-            r_e = r_s + cube_size
-        for C in range(0, fold[1]):
-            c_s = C * cube_size - C * ovlap[1]
-            c_e = c_s + cube_size
-            if c_e >= vol_dim[1]:
-                c_s = vol_dim[1] - cube_size
-                c_e = c_s + cube_size
-            for H in range(0, fold[2]):
-                h_s = H * cube_size - H * ovlap[2]
-                h_e = h_s + cube_size
-                if h_e >= vol_dim[2]:
-                    h_s = vol_dim[2] - cube_size
-                    h_e = h_s + cube_size
-                # accumulation
-                map_classes_mat[r_s:r_e, c_s:c_e, h_s:h_e, :] = map_classes_mat[r_s:r_e, c_s:c_e, h_s:h_e, :] + \
-                                                                cube_list[p_count]
-                cnt_classes_mat[r_s:r_e, c_s:c_e, h_s:h_e, :] = cnt_classes_mat[r_s:r_e, c_s:c_e, h_s:h_e, :] + 1.0
-
-                p_count += 1
-
-    # elinimate NaN
-    nan_idx = (cnt_classes_mat == 0)
-    cnt_classes_mat[nan_idx] = 1.0
-    # average
-    compose_vol = map_classes_mat / cnt_classes_mat
-
-    return compose_vol
 

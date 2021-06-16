@@ -1,7 +1,6 @@
 import io
 import json
 import logging
-import os
 from gzip import GzipFile
 from flask_mail import Mail
 from nibabel import FileHolder, Nifti1Image
@@ -19,7 +18,6 @@ from note.note_repo import NoteRepo
 from note.note_service import NoteService
 from scan.scan_repo import ScanRepo
 from scan.scan_service import ScanService
-from mytest.test import Test
 from user.user_repo import UserRepo
 from flask_cors import CORS
 from user.user_service import UserService
@@ -32,7 +30,7 @@ env_config = DevelopmentConfig
 app.config.from_object(env_config)
 
 try:
-    db = create_engine('postgresql://postgres:admin@localhost/heartsync_data')
+    db = create_engine('postgresql://postgres:admin@localhost/heartsync')
     con = db.connect()
     metadata = MetaData()
 except:
@@ -56,14 +54,15 @@ comment_service = CommentService(comment_repo)
 def login():
     user = json.loads(request.get_data())
     if 'username' not in user.keys() or 'password' not in user.keys():
-        response = make_response('Invalid login parameters', 400)
+        print("here")
+        response = make_response('Invalid login', 400)
     else:
         logging.info("Logging in for user " + user['username'])
         token = user_service.login(user['username'], user['password'])
         if token:
             response = make_response(jsonify(accessToken=token), 200)
         else:
-            response = make_response('Invalid login', 400)
+            response = make_response('Wrong username or password', 400)
 
     response.headers['Content-Type'] = 'application/json'
     return response
@@ -73,7 +72,9 @@ def login():
 def signup():
     user = json.loads(request.get_data())
     if 'username' not in user.keys() or 'password' not in user.keys() or 'email' not in user.keys() or 'firstname' not in user.keys() or 'lastname' not in user.keys():
-        response = make_response('Invalid signup parameters', 400)
+        response = make_response('Invalid signup', 400)
+    elif not user_service.validate_user(user):
+        response = make_response('Invalid signup', 400)
     else:
         user = user_service.signup(user['username'], user['password'], user['email'], user['firstname'],
                                    user['lastname'])
@@ -81,22 +82,6 @@ def signup():
             response = make_response(jsonify(user), 200)
         else:
             response = make_response('Username already exists', 409)
-
-    response.headers['Content-Type'] = 'application/json'
-    return response
-
-
-@app.route('/api/auth/confirm', methods=['POST'])
-def confirm_email():
-    data = json.loads(request.get_data())
-    if not data['token']:
-        response = make_response('Invalid confirm parameters', 400)
-    else:
-        try:
-            if user_service.confirm_email(data['token']):
-                response = make_response('Email confirmed successfully', 200)
-        except:
-            response = make_response('The confirmation link is invalid or has expired', 409)
 
     response.headers['Content-Type'] = 'application/json'
     return response
@@ -129,7 +114,7 @@ def process_file():
                     elif file_service.check_file_type(file):
                         fh = FileHolder(fileobj=GzipFile(fileobj=io.BytesIO(file.read())))
                         img = Nifti1Image.from_file_map({'header': fh, 'image': fh})
-                        file_id = file_service.segment_image(img)
+                        file_id = file_service.process_file(img)
                         scan_name = file.filename.split(".")[0]
                         scan = scan_service.save_scan(user.username, file_id, scan_name)
                         response = make_response(scan, 200)
@@ -165,7 +150,7 @@ def get_user_scans():
     return response
 
 
-@app.route('/api/files/get/<int:scanid>', methods=['GET'])
+@app.route('/api/files/get/<string:scanid>', methods=['GET'])
 def get_file(scanid):
     if 'Authorization' not in request.headers.keys():
         response = make_response('Missing authentication token', 400)
@@ -196,7 +181,7 @@ def get_file(scanid):
     return response
 
 
-@app.route('/api/notes/add/<int:scanid>', methods=['POST'])
+@app.route('/api/notes/add/<string:scanid>', methods=['POST'])
 def save_notes(scanid):
     if 'Authorization' not in request.headers.keys():
         response = make_response('Missing authentication token', 400)
@@ -225,7 +210,7 @@ def save_notes(scanid):
     return response
 
 
-@app.route('/api/notes/get/<int:scanid>', methods=['GET'])
+@app.route('/api/notes/get/<string:scanid>', methods=['GET'])
 def get_notes(scanid):
     if 'Authorization' not in request.headers.keys():
         response = make_response('Missing authentication token', 400)
@@ -247,15 +232,13 @@ def get_notes(scanid):
 
                 else:
                     note = notes_service.get_note_by_scan(scanid)
-                    if note is None:
-                        note = ''
                     response = make_response(note, 200)
 
     response.headers['Content-Type'] = 'application/json'
     return response
 
 
-@app.route('/api/comments/add/<int:scanid>', methods=['POST'])
+@app.route('/api/comments/add/<string:scanid>', methods=['POST'])
 def add_comment(scanid):
     if 'Authorization' not in request.headers.keys():
         response = make_response('Missing authentication token', 400)
@@ -287,7 +270,7 @@ def add_comment(scanid):
     return response
 
 
-@app.route('/api/comments/get/<int:scanid>', methods=['GET'])
+@app.route('/api/comments/get/<string:scanid>', methods=['GET'])
 def get_comments(scanid):
     if 'Authorization' not in request.headers.keys():
         response = make_response('Missing authentication token', 400)
@@ -309,14 +292,43 @@ def get_comments(scanid):
 
                 else:
                     comments = comment_service.get_comments_by_scan(scanid)
+
                     response = make_response(comments, 200)
+
+    response.headers['Content-Type'] = 'application/json'
+    return response
+
+@app.route('/api/scans/getone/<string:scanid>')
+def get_scan_by_id(scanid):
+    if 'Authorization' not in request.headers.keys():
+        response = make_response('Missing authentication token', 400)
+    else:
+        full_token = request.headers['Authorization']
+
+        if scanid is None:
+            response = make_response('Invalid parameters', 400)
+        else:
+            if full_token is None:
+                response = make_response('Unauthorized action! Token is invalid', 401)
+
+            else:
+                token = full_token.strip().split(" ")[1]
+                user = user_service.get_user_by_token(token)
+
+                if user is None:
+                    response = make_response('Unauthorized action! Token is invalid', 401)
+
+                else:
+                    scan = scan_service.get_scan_by_id(scanid)
+                    print(scan)
+                    if scan is None:
+                        response = make_response('Invalid scan number', 400)
+                    else:
+                        response = make_response(scan, 200)
 
     response.headers['Content-Type'] = 'application/json'
     return response
 
 
 if __name__ == '__main__':
-    tester = Test(comment_repo, comment_service, file_repo, file_service, notes_repo, notes_service, scan_repo, scan_service)
-    tester.run()
-    logging.info("Tests passed")
-    # app.run()
+    app.run()

@@ -4,7 +4,7 @@ import {IonCardContent, IonCardTitle, IonItem} from "@ionic/react";
 import './ScansHome.css';
 
 interface ScanPropsExt extends ScanProps {
-    onClick: (id?: number) => void
+    onClick: (id?: string) => void
 }
 
 const Scan: React.FC<ScanPropsExt> = ({id, name, username, fileid, onClick}) => {

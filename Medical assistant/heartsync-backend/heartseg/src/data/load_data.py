@@ -1,24 +1,21 @@
-import configparser
 import logging
 import os
 from glob import glob
 import nibabel as nib
 import numpy as np
-from matplotlib import pyplot as plt
-from heartseg.src.data.utils_data import read_h5_file, show_slices
+from heartseg.src.data.utils_data import read_h5_file
 
 
 class DataLoader:
 
     def __init__(self):
-        config = configparser.ConfigParser()
-        config.read('heartseg/model/init/model.ini')
-        # self.data_path = config.get('MODEL_INIT', 'DATA_DIR')
         self.data_path = "../data"
 
     def load_training_data(self):
         """
-        Load CT images used for training the model. The data are in 2 h5 files, one file containing the images and the
+        Load CT images that were no preprocessed with CLAHE
+        that are used for training the model.
+        The data are in 2 h5 files, one file containing the images and the
         other containing the labels
         :return: dictionary of images and dictionary of labels
         """
@@ -38,7 +35,8 @@ class DataLoader:
 
     def load_training_data_clahe(self):
         """
-            Loads CT images and labels used for training the model that had CLAHE applied. The images are of type .nii.gz
+            Loads CT images and labels used for training the model that had CLAHE applied.
+             The images are of type .nii.gz
             :return: list of all mytest images
         """
         data_dir = os.path.join('..', 'data')
@@ -75,7 +73,6 @@ class DataLoader:
 
         images = []
         for i in range(len(all_images)):
-        # for i in range(1):
             image = nib.load(all_images[i]).get_fdata()
             images.append(image)
 

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {RouteComponentProps} from "react-router";
 import {Header} from "../layout/Header";
 import {Footer} from "../layout/Footer";
@@ -25,20 +25,18 @@ interface LoginState {
 export const Login: React.FC<RouteComponentProps> = ({history}) => {
     const [state, setState] = useState<LoginState>({});
     const {username, password} = state
-    const {isAuthenticated, isAuthenticating, login, authenticationError} = useContext(AuthContext)
-    const [errorUsername, setErrorUsername] = useState('');
-    const [errorPassword, setErrorPassword] = useState('');
+    const {isAuthenticated, isAuthenticating, login, authenticationError, loginMessage} = useContext(AuthContext)
+    const [errorUsername, setErrorUsername] = useState<string>('');
+    const [errorPassword, setErrorPassword] = useState<string>('');
 
     const handleLogin = () => {
         setErrorUsername('');
         setErrorPassword('');
         validateUsername(username || '');
         validatePassword(password || '');
-        console.log(errorUsername.length)
         if(errorUsername.length == 0 && errorPassword.length == 0){
             login?.(username, password)
         }
-
     }
 
     if(isAuthenticated){
@@ -46,13 +44,13 @@ export const Login: React.FC<RouteComponentProps> = ({history}) => {
     }
 
     function validateUsername(username){
-        if(username === '') {
+        if(username == '' || username == null) {
             setErrorUsername('Username is invalid');
         }
     }
 
     function validatePassword(password){
-        if(password === ''){
+        if(password == '' || password == null){
             setErrorPassword('Password is invalid');
         }
     }
@@ -75,7 +73,7 @@ export const Login: React.FC<RouteComponentProps> = ({history}) => {
                         <IonLoading isOpen={isAuthenticating}></IonLoading>
                         <IonButton color="medium" shape="round" onClick={handleLogin}>Sign in</IonButton>
                         {authenticationError && (
-                            <div>{'Invalid login, please try again.'}</div>
+                            <div>{loginMessage}</div>
                         )}
                     </IonCardContent>
                 </IonCard>

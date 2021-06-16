@@ -1,6 +1,6 @@
 export interface ScanProps{
-    id?: number,
+    id?: string,
     name: string,
     username: string,
-    fileid: number
+    fileid: string
 }

@@ -15,7 +15,10 @@ import {
 } from "@ionic/react";
 import "./ScanDetails.css"
 import {ScansContext} from "./ScanProvider";
-import Comment from "./Comment";
+import Comment from "../comments/Comment";
+import {CommentContext} from "../comments/CommentProvider";
+import {FileContext} from "../file/FileProvider";
+import {NoteContext} from "../notes/NoteProvider";
 
 interface ScanDetailsProps extends RouteComponentProps<{
     _scanId: string
@@ -27,7 +30,9 @@ interface ScanDetailsState {
 }
 
 export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
-    const {downloadFile, saveNote, getNotes, notes, comments, saveComment, getComments} = useContext(ScansContext);
+    const {downloadFile, downloadingError} = useContext(FileContext);
+    const {notes, saveNote, getNotes, fetchingNotesError} = useContext(NoteContext);
+    const {comments, saveComment, getComments, fetchingCommentsError, savingCommentError} = useContext(CommentContext);
     const [state, setState] = useState<ScanDetailsState>({})
     const {notesText, comment} = state
     const [errorComment, setErrorComment] = useState('')
@@ -35,12 +40,15 @@ export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
     function getShareLink(){
         const url = match.params._scanId;
         navigator.clipboard.writeText(url);
-        alert("Your scan number was copied to clipboard");
+        alert("Your scan code was copied to clipboard");
     }
 
     useEffect(() => {
-        getNotes?.(parseInt(match.params._scanId));
-        console.log("Here we have it" + notes);
+        getNotes?.(match.params._scanId);
+
+        if(fetchingNotesError){
+            history.push('/home');
+        }
         // setState({...state, notesText: notes || ''});
         var n = document.getElementById("notesArea")
            if(n){n.setAttribute("value", notes || '');}
@@ -48,20 +56,22 @@ export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
     }, [notes])
 
     useEffect(() => {
-        var commentsProv = getComments?.(parseInt(match.params._scanId));
-        console.log(commentsProv)
+        var commentsProv = getComments?.(match.params._scanId);
+        if(fetchingCommentsError){
+            history.push('/home');
+        }
     }, [])
 
 
     function handleSaveNotes(){
-        saveNote?.(parseInt(match.params._scanId), notesText || '')
+        saveNote?.(match.params._scanId, notesText || '')
     }
 
     function handleSaveComment(){
         setErrorComment('');
         validateComment(comment || '');
         if(errorComment.length == 0) {
-            saveComment?.(parseInt(match.params._scanId), comment || '');
+            saveComment?.(match.params._scanId, comment || '');
         }
     }
 
@@ -72,7 +82,7 @@ export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
     }
 
     function handleDownloadFile(){
-        downloadFile?.(parseInt(match.params._scanId))
+        downloadFile?.(match.params._scanId)
     }
 
     return (
@@ -85,8 +95,8 @@ export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
                             <div className="top-column">
                                 <div className="top-column">
                                     <div className="first-col">
-                                <IonButton color="medium" shape="round" onClick={() => {handleDownloadFile();}}>Download your model</IonButton>
-                                        <IonButton color="medium" shape="round" onClick={() => {getShareLink()}}>Get scan number</IonButton>
+                                <IonButton color="medium" shape="round" onClick={() => {handleDownloadFile();}}>Download your 3D model</IonButton>
+                                        <IonButton color="medium" shape="round" onClick={() => {getShareLink()}}>Get share code</IonButton>
                                     </div>
                                         <div color="light" className="inside-content">
                                         <IonText><h3>What now?</h3></IonText>
@@ -124,7 +134,7 @@ export const ScanDetails: React.FC<ScanDetailsProps> = ({history, match}) => {
                         </IonCol>
                         <IonCol>
                             <div className="first-col">
-                                <IonCardTitle><h5>My notes:</h5></IonCardTitle>
+                                <IonCardTitle><h5>Notes:</h5></IonCardTitle>
                             </div>
                             <div className="">
                                 <IonCardContent>

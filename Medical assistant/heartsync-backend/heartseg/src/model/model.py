@@ -1,17 +1,13 @@
-import configparser
-from random import random
 import numpy as np
 from skimage.transform import resize
-from sklearn.model_selection import KFold
 import keras.models
 import logging
 import tensorflow as tf
 from tensorflow import keras as k
 from heartseg.src.data.load_data import DataLoader
-from heartseg.src.data.transform_data import preprocess_data, rotate_image, rotate_tf, rotate_images, prepare_test_image
-from heartseg.src.model.losses import loss_fn
+from heartseg.src.data.transform_data import preprocess_data, prepare_test_image
+from heartseg.src.model.losses import loss_fn, dice_coef
 from heartseg.src.utils.exception import PreprocessException
-from heartseg.src.data.utils_data import compose_cubes_to_vol, decompose_data_to_cubes
 
 
 def conv3D(input, output, kernel_size, strides):
@@ -43,19 +39,19 @@ def deconv3D(input, output):
 
 class UnetModel:
 
-    def __init__(self, model_name):
-        config = configparser.ConfigParser()
-        config.read('heartseg/model/init/model.ini')
-        # input_size = int(config.get('MODEL_INIT', 'INPUT_SIZE'))
+    def __init__(self, model_name, mode):
         input_size = 64
-        # input_chn = int(config.get('MODEL_INIT', 'INPUT_CHANNEL'))
         input_chn = 1
         self.input_shape = (input_size, input_size, input_size, input_chn)
         self.data_loader = DataLoader()
-        # self.model_path = config.get('MODEL_INIT', 'MODEL_DIR')
         self.model_path = 'heartseg/model/init'
         self.model_name = model_name
-        # TODO: load model in constructor
+        if mode == 'test':
+            self.load_model()
+
+    def load_model(self):
+        loss = {'loss_fn': loss_fn, 'dice_coef': dice_coef}
+        self.model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
 
     def build_model(self, ):
         """
@@ -143,76 +139,6 @@ class UnetModel:
 
         return model
 
-    def get_model(self):
-        """
-        Builds U-net hybrid loss model with less layers for training in the local environment
-        :return: keras model
-        """
-
-        input_layer = k.Input(shape=self.input_shape)
-
-        conv1 = conv3D(input=input_layer, output=64, kernel_size=3, strides=1)
-        conv1_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv1)
-        conv1_relu = k.layers.ReLU()(conv1_bn)
-        pool1 = k.layers.MaxPool3D(pool_size=2, strides=2)(conv1_relu)
-
-        conv2 = conv3D(input=pool1, output=128, kernel_size=3, strides=1)
-        conv2_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv2)
-        conv2_relu = k.layers.ReLU()(conv2_bn)
-        pool2 = k.layers.MaxPool3D(pool_size=2, strides=2)(conv2_relu)
-
-        conv3 = conv3D(input=pool2, output=256, kernel_size=3, strides=1)
-        conv3_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv3)
-        conv3_relu = k.layers.ReLU()(conv3_bn)
-        conv3_2 = conv3D(input=conv3_relu, output=256, kernel_size=3, strides=1)
-        conv3_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv3_2)
-        conv3_relu_2 = k.layers.ReLU()(conv3_bn_2)
-        pool3 = k.layers.MaxPool3D(pool_size=2, strides=2)(conv3_relu_2)
-
-        conv5 = conv3D(input=pool3, output=512, kernel_size=3, strides=1)
-        conv5_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv5)
-        conv5_relu = k.layers.ReLU()(conv5_bn)
-        conv5_2 = conv3D(input=conv5_relu, output=512, kernel_size=3, strides=1)
-        conv5_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(conv5_2)
-        conv5_relu_2 = k.layers.ReLU()(conv5_bn_2)
-
-        deconv2 = deconv3D(input=conv5_relu_2, output=256)
-        deconv2_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv2)
-        deconv2_relu = k.layers.ReLU()(deconv2_bn)
-
-        concat2 = k.layers.concatenate([deconv2_relu, conv3])
-        deconv2_2 = conv3D(input=concat2, output=128, kernel_size=3, strides=1)
-        deconv2_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv2_2)
-        deconv2_relu_2 = k.layers.ReLU()(deconv2_bn_2)
-
-        deconv3 = deconv3D(input=deconv2_relu_2, output=128)
-        deconv3_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv3)
-        deconv3_relu = k.layers.ReLU()(deconv3_bn)
-
-        concat3 = k.layers.concatenate([deconv3_relu, conv2])
-        deconv3_2 = conv3D(input=concat3, output=64, kernel_size=3, strides=1)
-        deconv3_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv3_2)
-        deconv3_relu_2 = k.layers.ReLU()(deconv3_bn_2)
-
-        deconv1 = deconv3D(input=deconv3_relu_2, output=64)
-        deconv1_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv1)
-        deconv1_relu = k.layers.ReLU()(deconv1_bn)
-
-        concat1 = k.layers.concatenate([deconv1_relu, conv1])
-        deconv1_2 = conv3D(input=concat1, output=32, kernel_size=3, strides=1)
-        deconv1_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv1_2)
-        deconv1_relu_2 = k.layers.ReLU()(deconv1_bn_2)
-
-        output = k.layers.Conv3D(8, kernel_size=1, strides=1)(deconv1_relu_2)
-        prob = k.layers.Softmax()(output)
-        # pred_labels = tf.argmax(prob, axis=4)
-
-        model = k.models.Model(inputs=input_layer, outputs=prob)
-
-        print(model.summary())
-
-        return model
-
     def train_model(self):
         """
         Trains the U-net hybrid loss segmentation model
@@ -222,36 +148,17 @@ class UnetModel:
             data, labels = self.data_loader.load_training_data_clahe()
             inputs, outputs = preprocess_data(data, labels, self.input_shape)
 
-            idxes = [i for i in range(0, 20)]
-            np.random.shuffle(idxes)
-            train_idx = idxes[:10]
-            val_idx = idxes[-10:]
-
-            train_inputs = inputs[train_idx]
-            train_outputs = outputs[train_idx]
-            train_inputs, train_outputs = rotate_images(train_inputs, train_outputs)
-
-            val_inputs = inputs[val_idx]
-            val_outputs = outputs[val_idx]
-            train_loader = tf.data.Dataset.from_tensor_slices((train_inputs, train_outputs))
-            validation_loader = tf.data.Dataset.from_tensor_slices((val_inputs, val_outputs))
+            train_loader = tf.data.Dataset.from_tensor_slices((inputs, outputs))
 
             logging.info("Preparing batches...")
             batch_size = 1
             train_dataset = (
                 train_loader
-                    .shuffle(len(train_idx))
-                    .shard(num_shards=len(train_inputs) // 10, index=0)
-                    .batch(batch_size)
-            )
-
-            validation_dataset = (
-                validation_loader
+                    .shuffle(len(inputs))
                     .batch(batch_size)
             )
 
             logging.info("Loading model...")
-            # model = self.get_model()
             model = self.build_model()
 
             logging.info("Compiling model...")
@@ -261,7 +168,7 @@ class UnetModel:
 
             model.fit(train_dataset, epochs=150)
 
-            scores = model.evaluate(validation_dataset, verbose=1)
+            scores = model.evaluate(train_dataset, verbose=1)
 
             print("%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
 
@@ -272,47 +179,33 @@ class UnetModel:
         except PreprocessException as pe:
             logging.error("Preprocess exception " + str(pe))
 
-    def test_model(self, image):
+    def process_image(self, image):
         """
         Test model on given image
         :param image: image of heart to be segmented
         :return: prediction of the model
         """
-        sh = image.shape
-        resize_dim = (np.array([64, 64, 64])).astype('int')
+        original_size = image.shape
         image = prepare_test_image(image, self.input_shape)
-        cube_list = decompose_data_to_cubes(image, 1, 64, 1, 4)
 
-        try:
-            loss = {'loss_fn': loss_fn}
-            model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
-        except Exception as e:
-            logging.error("Error loading model " + str(e))
+        predictions = self.model.predict(image, batch_size=1, verbose=1)
+        labels = tf.argmax(predictions, axis=4).numpy()
+        labels = np.reshape(labels, (64, 64, 64))
 
-        cube_prob_list = []
-        cube_label_list = []
-        print(len(cube_list))
-        for c in cube_list:
-            cube_to_test = c
-            mean_temp = np.mean(cube_to_test)
-            dev_temp = np.std(cube_to_test)
-            cube2test_norm = (cube_to_test - mean_temp) / dev_temp
+        rename_map = [0, 205, 420, 500, 550, 600, 820, 850]
 
-            prediction = model.predict(cube2test_norm, batch_size=1, verbose=1)
-            pred_labels = tf.argmax(prediction, axis=4).numpy()
-            cube_prob_list.append(prediction)
-            cube_label_list.append(pred_labels)
+        values = []
+        for x in range(len(labels)):
+            values_x = []
+            for y in range(len(labels[x])):
+                values_y = []
+                for z in range(len(labels[x][y])):
+                    values_y.append(rename_map[labels[x][y][z]])
+                values_x.append(values_y)
+            values.append(values_x)
 
-        composed_prob_vol = compose_cubes_to_vol(cube_prob_list, resize_dim, 64, 4, 8)
+        values = np.asarray(values)
 
-        min_prob = np.min(composed_prob_vol)
-        max_prob = np.max(composed_prob_vol)
-        for p in range(8):
-            composed_prob_resz = resize(composed_prob_vol[:, :, :, p], sh, order=1, preserve_range=True)
+        prediction = resize(values, original_size, order=0, preserve_range=True, anti_aliasing=False)
 
-            composed_prob_resz = (composed_prob_resz - np.min(composed_prob_resz)) / (np.max(composed_prob_resz) - np.min(composed_prob_resz))
-            composed_prob_resz = (composed_prob_resz - min_prob) / (max_prob - min_prob)
-            composed_prob_resz = composed_prob_resz * 255
-            composed_prob_resz = composed_prob_resz.astype('int16')
-
-        return composed_prob_resz
+        return prediction

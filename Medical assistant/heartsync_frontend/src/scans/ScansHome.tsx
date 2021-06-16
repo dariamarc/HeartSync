@@ -1,12 +1,11 @@
 import React, {useContext, useRef, useState} from "react";
 import {RouteComponentProps} from "react-router";
 import {Header} from "../layout/Header";
-import {Footer} from "../layout/Footer";
+
 import {
     IonButton,
     IonCard,
     IonCardContent,
-    IonCardHeader,
     IonCardTitle,
     IonContent, IonIcon,
     IonInput, IonItem,
@@ -14,7 +13,7 @@ import {
     IonPage
 } from "@ionic/react";
 import './ScansHome.css';
-import {informationCircle} from "ionicons/icons";
+import {arrowUp, arrowUpCircleOutline, informationCircle} from "ionicons/icons";
 import {ScansContext} from "./ScanProvider";
 import Scan from "./Scan";
 
@@ -24,8 +23,9 @@ interface ScansHomeState {
 
 
 export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
-    const {scans, fetching, fetchingError, saveScan, saving, savingError} = useContext(ScansContext);
+    const {scans, fetchingError, saveScan, saving, savingError, saveScanMessage, getScan, fetchingScanError} = useContext(ScansContext);
     const [state, setState] = useState<ScansHomeState>({});
+    const [scanNoError, setScanNoError] = useState<string>('')
 
     interface InternalValues {
         file: any;
@@ -54,18 +54,37 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
     };
 
     function handleGotoScan(){
-        history.push(`/scan/${state.scanNo}`);
+        console.log("")
+        setScanNoError('');
+        if(state.scanNo == '' || state.scanNo == undefined){
+            setScanNoError('Please enter a valid scan number');
+        }
+        else{
+            getScan?.(state.scanNo);
+            console.log(fetchingScanError);
+            if (fetchingScanError === null) {
+                history.push(`/scan/${state.scanNo}`);
+            }
+            else {
+                setScanNoError('Please enter a valid scan number');
+            }
+        }
+
     }
 
     return (
         <IonPage>
             <Header></Header>
             <IonContent color="light">
-                <IonInput placeholder='Input scan number shared with user' onIonChange={(e) => {setState({...state, scanNo: e.detail.value || ''})}}></IonInput>
+                <IonInput placeholder='Input your scan code' onIonChange={(e) => {setState({...state, scanNo: e.detail.value || ''})}}></IonInput>
                 <IonButton color="medium" shape="round" onClick={() => {handleGotoScan()}}>Go to scan</IonButton>
+                {scanNoError && <div>{scanNoError}</div>}
                 <div>
                     <IonCard className="upload-card">
-                        <IonCardTitle className="card-center"><h4>Upload a file now</h4></IonCardTitle>
+                        <IonCardTitle className="card-center">
+                            <IonIcon icon={arrowUpCircleOutline}/>
+                            <h4>Upload a file now</h4>
+                        </IonCardTitle>
                         <IonCardContent className="card-center">
                             <IonItem><input type='file' accept=".nii.gz" onChange={(ev) => onFileChange(ev)}></input></IonItem>
                             <IonButton color="medium" shape="round" onClick={() => submitFile()}>Submit</IonButton>
@@ -73,7 +92,7 @@ export const ScansHome: React.FC<RouteComponentProps> = ({history}) => {
                                 <IonIcon icon={informationCircle}></IonIcon>
                                 <h6 className="card-center">Accepted format: .nii.gz</h6>
                             </IonItem>
-                            {savingError && (<div>Invalid file. Upload only .nii.gz format!</div>)}
+                            {savingError && (<div>{saveScanMessage}</div>)}
                         </IonCardContent>
                     </IonCard>
                     <h6 className="card-center">or</h6>

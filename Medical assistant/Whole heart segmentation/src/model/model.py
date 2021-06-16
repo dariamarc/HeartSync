@@ -1,6 +1,7 @@
 import configparser
 from random import random
 import numpy as np
+import tensorflow.keras.layers
 from skimage.transform import resize
 from sklearn.model_selection import KFold
 import keras.models
@@ -53,7 +54,7 @@ class UnetModel:
         self.model_path = config.get('MODEL_INIT', 'MODEL_DIR')
         self.model_name = model_name
 
-    def build_model(self, ):
+    def build_model(self):
         """
         Builds U-net model for segmentation task
         :return: keras model
@@ -98,7 +99,7 @@ class UnetModel:
         deconv1_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv1)
         deconv1_relu = k.layers.ReLU()(deconv1_bn)
 
-        concat1 = k.layers.concatenate([deconv1_relu, conv4_2])
+        concat1 = tensorflow.keras.layers.Concatenate(axis=4)([deconv1_relu, conv4_2])
         deconv1_2 = conv3D(input=concat1, output=256, kernel_size=3, strides=1)
         deconv1_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv1_2)
         deconv1_relu_2 = k.layers.ReLU()(deconv1_bn_2)
@@ -107,7 +108,7 @@ class UnetModel:
         deconv2_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv2)
         deconv2_relu = k.layers.ReLU()(deconv2_bn)
 
-        concat2 = k.layers.concatenate([deconv2_relu, conv3])
+        concat2 = tensorflow.keras.layers.Concatenate(axis=4)([deconv2_relu, conv3])
         deconv2_2 = conv3D(input=concat2, output=128, kernel_size=3, strides=1)
         deconv2_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv2_2)
         deconv2_relu_2 = k.layers.ReLU()(deconv2_bn_2)
@@ -116,7 +117,7 @@ class UnetModel:
         deconv3_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv3)
         deconv3_relu = k.layers.ReLU()(deconv3_bn)
 
-        concat3 = k.layers.concatenate([deconv3_relu, conv2])
+        concat3 = tensorflow.keras.layers.Concatenate(axis=4)([deconv3_relu, conv2])
         deconv3_2 = conv3D(input=concat3, output=64, kernel_size=3, strides=1)
         deconv3_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv3_2)
         deconv3_relu_2 = k.layers.ReLU()(deconv3_bn_2)
@@ -125,7 +126,7 @@ class UnetModel:
         deconv4_bn = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv4)
         deconv4_relu = k.layers.ReLU()(deconv4_bn)
 
-        concat4 = k.layers.concatenate([deconv4_relu, conv1])
+        concat4 = tensorflow.keras.layers.Concatenate(axis=4)([deconv4_relu, conv1])
         deconv4_2 = conv3D(input=concat4, output=32, kernel_size=3, strides=1)
         deconv4_bn_2 = k.layers.BatchNormalization(epsilon=1e-5, scale=True, momentum=0.9)(deconv4_2)
         deconv4_relu_2 = k.layers.ReLU()(deconv4_bn_2)
@@ -186,7 +187,7 @@ class UnetModel:
             logging.info("Loading model...")
             # model = self.get_model()
             # model = self.build_model()
-            loss = {'loss_fn': loss_fn}
+            loss = {'loss_fn': loss_fn, 'dice_coef': dice_coef}
             model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
 
             logging.info("Compiling model...")
@@ -194,18 +195,20 @@ class UnetModel:
 
             logging.info("Training model...")
 
-            model.fit(train_dataset, epochs=100)
+            # model.fit(train_dataset, epochs=150)
 
             scores = model.evaluate(train_dataset, verbose=1)
 
             print("%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
+            print("%s: %.2f%%" % (model.metrics_names[2], scores[2] * 100))
 
-            model.save(self.model_path + "/heartsegmodel_final.h5")
+            # model.save(self.model_path + "/heartsegmodel_lucky.h5")
 
         except FileNotFoundError as fe:
             logging.error("File not found " + str(fe))
         except PreprocessException as pe:
-            logging.error("Preprocess exception " + str(pe))
+            # logging.error("Preprocess exception " + str(pe))
+            raise pe
 
     def test_model(self, image):
         """
@@ -213,41 +216,31 @@ class UnetModel:
         :param image: image of heart to be segmented
         :return: prediction of the model
         """
-        sh = image.shape
-        resize_dim = (np.array([64, 64, 64])).astype('int')
+        original_size = image.shape
         image = prepare_test_image(image, self.input_shape)
-        cube_list = decompose_data_to_cubes(image, 1, 64, 1, 4)
 
-        try:
-            loss = {'loss_fn': loss_fn}
-            model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
-        except Exception as e:
-            logging.error("Error loading model " + str(e))
+        loss = {'loss_fn': loss_fn, 'dice_coef': dice_coef}
+        model = keras.models.load_model(self.model_path + "/" + self.model_name, custom_objects=loss)
 
-        cube_prob_list = []
-        cube_label_list = []
-        print(len(cube_list))
-        for c in cube_list:
-            cube_to_test = c
-            mean_temp = np.mean(cube_to_test)
-            dev_temp = np.std(cube_to_test)
-            cube2test_norm = (cube_to_test - mean_temp) / dev_temp
+        predictions = model.predict(image, batch_size=1, verbose=1)
+        labels = tf.argmax(predictions, axis=4).numpy()
+        labels = np.reshape(labels, (64, 64, 64))
 
-            prediction = model.predict(cube2test_norm, batch_size=1, verbose=1)
-            pred_labels = tf.argmax(prediction, axis=4).numpy()
-            cube_prob_list.append(prediction)
-            cube_label_list.append(pred_labels)
+        rename_map = [0, 205, 420, 500, 550, 600, 820, 850]
 
-        composed_prob_vol = compose_cubes_to_vol(cube_prob_list, resize_dim, 64, 4, 8)
+        values = []
+        for x in range(len(labels)):
+            values_x = []
+            for y in range(len(labels[x])):
+                values_y = []
+                for z in range(len(labels[x][y])):
+                    values_y.append(rename_map[labels[x][y][z]])
+                values_x.append(values_y)
+            values.append(values_x)
 
-        min_prob = np.min(composed_prob_vol)
-        max_prob = np.max(composed_prob_vol)
-        for p in range(8):
-            composed_prob_resz = resize(composed_prob_vol[:, :, :, p], sh, order=1, preserve_range=True)
+        values = np.asarray(values)
 
-            composed_prob_resz = (composed_prob_resz - np.min(composed_prob_resz)) / (np.max(composed_prob_resz) - np.min(composed_prob_resz))
-            composed_prob_resz = (composed_prob_resz - min_prob) / (max_prob - min_prob)
-            composed_prob_resz = composed_prob_resz * 255
-            composed_prob_resz = composed_prob_resz.astype('int16')
+        prediction = resize(values, original_size, order=0, preserve_range=True, anti_aliasing=False)
 
-        return composed_prob_resz
+        return prediction
+
