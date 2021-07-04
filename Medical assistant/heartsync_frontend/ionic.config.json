@@ -1,7 +1,0 @@
-{
-  "name": "heartsync_frontend",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}

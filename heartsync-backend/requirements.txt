@@ -1,0 +1,14 @@
+PyJWT~=1.4.2
+Flask~=1.1.2
+SQLAlchemy~=1.4.11
+h5py~=3.2.1
+matplotlib~=3.3.4
+nibabel~=3.2.1
+scikit-image~=0.17.2
+numpy~=1.20.1
+tensorflow~=2.5.0
+scipy~=1.6.1
+nipype~=1.6.0
+Keras~=2.4.3
+passlib~=1.7.4
+itsdangerous~=1.1.0
